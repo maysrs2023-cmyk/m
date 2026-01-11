@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kasse – Mays</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js"></script>
+  <style>
+    .input {
+      width: 100%;
+      border: 1px solid #fecdd3;
+      border-radius: 0.75rem;
+      padding: .6rem .8rem;
+      outline: 0;
+    }
+    .input:focus {
+      box-shadow: 0 0 0 3px rgba(236,72,153,.35);
+      border-color: #f9a8d4;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen bg-pink-50">
+
+  <!-- Header -->
+  <div class="bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/cart.html" class="text-pink-600 hover:underline">&larr; Zurück zum Warenkorb</a>
+      <b>Kasse</b>
+      <a href="/index.html" class="text-pink-600 hover:underline">Startseite</a>
+    </div>
+  </div>
+
+  <main class="max-w-6xl mx-auto px-4 py-6 grid gap-6 md:grid-cols-[2fr,1fr]">
+
+    <!-- Zusammenfassung -->
+    <aside class="bg-white rounded-2xl shadow p-6 h-fit" id="summary"></aside>
+
+    <!-- Formular -->
+    <form id="checkoutForm" class="bg-white rounded-2xl shadow p-6 space-y-4">
+
+      <!-- Liefermethode -->
+      <div>
+        <label class="block mb-1 font-semibold">Liefermethode</label>
+        <select name="method" class="input">
+          <option value="shipping">Versand</option>
+          <option value="pickup">Abholung im Laden</option>
+        </select>
+      </div>
+
+      <!-- ⚠️ Warnung (kommt dynamisch via JS) -->
+
+      <!-- Weiter zur Zahlung -->
+      <button type="submit" class="w-full bg-pink-500 text-white rounded-lg py-2 hover:bg-pink-600">
+        Weiter zur Zahlung
+      </button>
+    </form>
+  </main>
+
+  <script>
+    const PRODUCTS = window.MAYS_PRODUCTS || [];
+    const CART = window.MAYS_CART_API || { getCart: () => [], setCart: () => {}, refreshBadge: () => {} };
+
+    const pickupOnlyIds = [
+      'arabisches-eis-portion-1',
+      'arabisches-eis-mit-pistazien-stk',
+      'atayef-500g',
+      'atayef-1kg',
+      'warbat-sahne-stk',
+      'halawa-al-jibn-500g',
+      'halawa-al-jibn-1kg'
+    ];
+
+    const fmt = cents => "€ " + (cents / 100).toFixed(2).replace(".", ",");
+
+    // Wiederherstellen gespeicherter Methode
+    const savedMethod = localStorage.getItem("deliveryMethod");
+    if (savedMethod) {
+      const methodSelect = document.querySelector("select[name='method']");
+      if (methodSelect) methodSelect.value = savedMethod;
+    }
+
+    // Methode wählen → ggf. Produkte entfernen
+    document.querySelector("select[name='method']").addEventListener("change", (e) => {
+      const selected = e.target.value;
+      localStorage.setItem("deliveryMethod", selected);
+      const cart = CART.getCart();
+
+      if (selected === "shipping") {
+        const filtered = cart.filter(i => !pickupOnlyIds.includes(i.id));
+        const removed = cart.length - filtered.length;
+
+        if (removed > 0) {
+          CART.setCart(filtered);
+          CART.refreshBadge();
+          alert(`${removed} Produkte wurden entfernt, weil sie nicht versendet werden dürfen.`);
+          location.reload();
+        }
+      }
+    });
+
+    // Bestellübersicht rendern
+    function renderSummary() {
+      const summary = document.getElementById("summary");
+      const cart = CART.getCart();
+
+      if (!cart.length) {
+        summary.innerHTML = "<p>Dein Warenkorb ist leer.</p>";
+        return;
+      }
+
+      let sub = 0;
+      const items = cart.map(row => {
+        const line = row.price * row.qty;
+        sub += line;
+        return `<li class="flex justify-between">
+                  <span>${row.name} × ${row.qty}</span>
+                  <span>${fmt(line)}</span>
+                </li>`;
+      }).join("");
+
+      const vat = Math.round(sub * 0.07);
+
+      summary.innerHTML = `
+        <h3 class="font-semibold mb-2">Bestellübersicht</h3>
+        <ul class="space-y-1 mb-3">${items}</ul>
+        <div class="flex justify-between text-sm"><span>Zwischensumme</span><span>${fmt(sub)}</span></div>
+        <div class="flex justify-between text-sm text-gray-600"><span>inkl. MwSt (7%)</span><span>${fmt(vat)}</span></div>
+        <div class="flex justify-between font-semibold border-t pt-2 mt-2">
+          <span>Gesamt</span><span>${fmt(sub)}</span>
+        </div>
+        <div class="text-sm text-gray-500 mt-2">
+          Versandkosten nach Europa werden im Checkout berechnet.<br>
+          Abholung im Laden kostenlos möglich.
+        </div>
+      `;
+    }
+
+    renderSummary();
+
+    // Warnung anzeigen, wenn Pickup-Only-Produkte im Warenkorb sind
+    const cart = CART.getCart();
+    const hasPickupOnly = cart.some(item => pickupOnlyIds.includes(item.id));
+    if (hasPickupOnly) {
+      const form = document.getElementById("checkoutForm");
+      const warning = document.createElement("p");
+      warning.className = "text-red-600 text-sm";
+      warning.textContent = "⚠️ Einige Produkte können nur abgeholt werden!";
+      form.prepend(warning);
+    }
+
+    // Stripe Checkout starten
+    document.getElementById("checkoutForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const cart = CART.getCart();
+      if (!cart.length) {
+        alert("Warenkorb ist leer.");
+        return;
+      }
+
+      try {
+        const form = Object.fromEntries(new FormData(e.target).entries());
+        const items = cart.map(i => ({ id: i.variantId || i.id, qty: i.qty }));
+        const pickup = (form.method === "pickup");
+
+        // Letzter Check vor Versand
+        if (!pickup) {
+          const filtered = cart.filter(i => !pickupOnlyIds.includes(i.id));
+          if (filtered.length !== cart.length) {
+            CART.setCart(filtered);
+            alert("Einige Produkte konnten nicht versendet werden und wurden entfernt.");
+            location.reload();
+            return;
+          }
+        }
+
+        const res = await fetch("/api/create-checkout-session", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ items, customer: form, pickup })
+        });
+
+        const data = await res.json();
+
+        if (data.url) {
+          window.location.href = data.url;
+        } else {
+          alert(data.error || "Fehler beim Starten der Zahlung.");
+        }
+
+      } catch (err) {
+        alert("Fehler beim Starten der Zahlung.");
+      }
+    });
+  </script>
+</body>
+</html>

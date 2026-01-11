@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>FAQ – Mays</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-pink-50 min-h-screen flex flex-col font-sans">
+
+  <!-- ================= HEADER ================= -->
+  <header class="bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-[auto,1fr,auto] items-center">
+
+      <!-- Links: Zurück -->
+      <a href="./index.html" class="text-pink-600 font-medium">
+         Zurück
+      </a>
+
+      <!-- Mitte: Logo -->
+      <div class="flex justify-center">
+        <a href="./index.html">
+          <img src="./images/mays.png" alt="Mays Logo" class="h-10">
+        </a>
+      </div>
+
+      <!-- Rechts: Warenkorb -->
+      <a href="./cart.html"
+         class="relative p-2 rounded-full border border-pink-200 hover:bg-pink-50">
+
+        <svg class="h-6 w-6 text-gray-800"
+             viewBox="0 0 24 24"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2">
+          <path d="M3 3h2l2.2 10.5a2 2 0 0 0 2 1.5h8.6a2 2 0 0 0 2-1.6l1.1-6.4H6.1"/>
+          <circle cx="9" cy="20" r="1.6"/>
+          <circle cx="18" cy="20" r="1.6"/>
+        </svg>
+
+        <span
+          id="cartBadge"
+          class="absolute -top-1 -right-1 text-[11px] bg-pink-500 text-white rounded-full px-1.5 py-0.5">
+          0
+        </span>
+      </a>
+
+    </div>
+  </header>
+
+  <!-- ================= INHALT ================= -->
+  <main class="flex-grow">
+    <div class="max-w-3xl mx-auto px-4 py-12">
+      <div class="bg-white rounded-3xl shadow-lg p-8 space-y-8 text-gray-700 leading-relaxed">
+
+        <h1 class="text-3xl font-bold text-pink-700 text-center mb-6">
+          FAQ – Häufige Fragen
+        </h1>
+
+        <div>
+          <h2 class="font-semibold text-lg text-pink-700">Öffnungszeiten</h2>
+          <p>
+            Unser Restaurant ist täglich von <b>12:00 bis 20:00 Uhr</b> geöffnet.
+            Bitte schauen Sie auch bei Google vorbei, da sich die Zeiten je nach
+            Sommer oder Winter leicht ändern können.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-lg text-pink-700">Essen vor Ort</h2>
+          <p>
+            Natürlich können Sie unsere Desserts und Spezialitäten direkt bei uns
+            genießen – am besten in der gemütlichen Außenlounge.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-lg text-pink-700">Lieferung</h2>
+          <p>
+            Für größere Bestellungen ab <b>90 €</b> liefern wir auch zu Ihnen nach Hause.<br>
+            Innerhalb von Ibbenbüren berechnen wir 10 €, außerhalb der Stadt
+            kommt ab dem 3. Kilometer jeweils 1 € pro Kilometer hinzu.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-lg text-pink-700">Unsere beliebtesten Desserts</h2>
+          <ul class="list-disc ml-6">
+            <li>Arabische Spezialitäten mit Ghee</li>
+            <li>Käse-Süßigkeiten (Halawa mit Käse)</li>
+            <li>Warbat mit Cremefüllung</li>
+            <li>Original Idliber Shuaibiya</li>
+            <li>Wechselnde saisonale Köstlichkeiten</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-lg text-pink-700">Mansaf</h2>
+          <p>
+            Unsere Mansaf-Gerichte bereiten wir ausschließlich auf Vorbestellung zu –
+            so können wir garantieren, dass sie frisch und in bester Qualität serviert werden.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-lg text-pink-700">Süßspeisen auf Vorbestellung</h2>
+          <ul class="list-disc ml-6">
+            <li>Shuaibiya: ab 10 Stück, ca. 2 Stunden vorher</li>
+            <li>Knafeh nach Nablus-Art: ab 3 kg, ca. 2 Stunden vorher</li>
+            <li>Knuspriger Meshabbak: ab 2 kg, ca. 2 Stunden vorher</li>
+            <li>Mdalouqa: ab 1 kg, ca. 15 Minuten vorher</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-semibold text-lg text-pink-700">Tabletts für Feiern</h2>
+          <p>
+            Gerne bereiten wir komplette Tabletts in jeder gewünschten Menge vor.
+            Auf Wunsch richten wir die Süßspeisen auch dekorativ auf Tellern an –
+            perfekt für Feiern und besondere Anlässe.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-white border-t border-gray-100 mt-16">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid sm:grid-cols-3 gap-8 text-sm">
+
+      <div>
+        <div class="font-semibold mb-2">Kontakt</div>
+        <div>
+          WhatsApp:
+          <a class="text-pink-600" href="https://wa.me/4917677992233" target="_blank">
+            0176 77 99 22 33
+          </a>
+        </div>
+        <div>
+          E-Mail:
+          <a class="text-pink-600" href="mailto:Mays_r.s@yahoo.com">
+            Mays_r.s@yahoo.com
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="font-semibold mb-2">Adresse</div>
+        <a class="text-pink-600" target="_blank"
+           href="https://www.google.com/maps/dir/?api=1&destination=Lagenbeckerstraße%20104%2C%2049477%20Ibbenbüren">
+          Lagenbeckerstraße 104<br>
+          49477 Ibbenbüren
+        </a>
+        <div class="mt-2 text-gray-600">
+          Sommer (Mo–So): 12–21 Uhr<br>
+          Winter (Mo–So): 12–20 Uhr
+        </div>
+      </div>
+
+      <div>
+        <div class="font-semibold mb-2">Infos</div>
+        <nav class="flex flex-wrap gap-3">
+          <a class="text-pink-600" href="./ueber-uns.html">Über uns</a>
+          <a class="text-pink-600" href="./faq.html">FAQ</a>
+          <a class="text-pink-600" href="./versand.html">Versand & Rückgabe</a>
+          <a class="text-pink-600" href="./datenschutz.html">Datenschutz</a>
+          <a class="text-pink-600" href="./agb.html">AGB</a>
+          <a class="text-pink-600 hover:underline" href="/presse.html">Presse</a>
+        </nav>
+      </div>
+
+    </div>
+
+    <div class="text-center text-xs text-gray-500 py-6">
+      © 2025 Mays Restaurants & Süßspeisen
+    </div>
+  </footer>
+
+<!-- Warenkorb-Badge aktualisieren -->
+<script>
+  const CART_KEY = "mays_cart";
+  const getCart = () => JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+  const badge = document.getElementById("cartBadge");
+  if (badge) {
+    const n = getCart().reduce((s,i)=>s+(+i.qty||0),0);
+    badge.textContent = n;
+  }
+</script>
+
+</body>
+</html>

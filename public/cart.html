@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Warenkorb – Mays</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js"></script>
+</head>
+<body class="min-h-screen bg-pink-50">
+
+  <!-- Header -->
+  <div class="bg-white border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-3 grid grid-cols-[auto,1fr,auto] items-center">
+      <a href="/index.html"
+   class="text-pink-600 font-semibold hover:underline">
+  Weiter einkaufen
+</a>
+
+      <img src="/images/mays.png" alt="Mays Logo" class="justify-self-center h-14 w-auto object-contain rounded-md">
+      <span
+  class="justify-self-end text-sm font-semibold text-pink-600">
+  Warenkorb
+</span>
+
+    </div>
+  </div>
+
+  <!-- Inhalt -->
+  <main class="max-w-6xl mx-auto px-4 py-8 grid lg:grid-cols-[2fr,1fr] gap-8">
+    <section id="cartList" class="space-y-4"></section>
+
+    <aside class="bg-white rounded-2xl border border-pink-200 p-5 h-fit">
+      <h2 class="text-lg font-bold mb-4">Zusammenfassung</h2>
+      <div class="flex justify-between py-1 text-sm">
+        <span>Zwischensumme</span><span id="subTotal">€ 0,00</span>
+      </div>
+      <div class="flex justify-between py-1 text-sm text-gray-600">
+        <span>inkl. MwSt. (7%)</span><span id="vat">€ 0,00</span>
+      </div>
+      <div class="flex justify-between py-2 border-t mt-3 font-semibold">
+        <span>Gesamt</span><span id="grandTotal">€ 0,00</span>
+      </div>
+      <p class="mt-2 text-xs text-gray-500">Versandkosten werden im Checkout berechnet.</p>
+
+
+    <button id="checkoutBtn"
+   class="mt-4 w-full text-center px-4 py-3 rounded-xl bg-pink-500 text-white hover:bg-pink-600">
+  Weiter zur Zahlung
+</button>
+    </aside>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+<footer class="bg-white border-t border-gray-100 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-10 grid sm:grid-cols-3 gap-8 text-sm">
+
+    <div>
+      <div class="font-semibold mb-2">Kontakt</div>
+      <div>
+        WhatsApp:
+        <a class="text-pink-600 hover:underline"
+           href="https://wa.me/4917677992233" target="_blank">
+          0176 77 99 22 33
+        </a>
+      </div>
+      <div>
+        E-Mail:
+        <a class="text-pink-600 hover:underline"
+           href="mailto:Mays_r.s@yahoo.com">
+          Mays_r.s@yahoo.com
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="font-semibold mb-2">Adresse</div>
+      <a class="text-pink-600 hover:underline"
+         target="_blank"
+         href="https://www.google.com/maps/dir/?api=1&destination=Lagenbeckerstraße%20104%2C%2049477%20Ibbenbüren">
+        Lagenbecker Straße 104<br>
+        49477 Ibbenbüren
+      </a>
+      <div class="mt-2 text-gray-600">
+        Sommer (Mo–So): 12–21 Uhr<br>
+        Winter (Mo–So): 12–20 Uhr
+      </div>
+    </div>
+
+    <div>
+      <div class="font-semibold mb-2">Infos</div>
+      <nav class="flex flex-wrap gap-3">
+        <a class="text-pink-600 hover:underline" href="/ueber-uns.html">Über uns</a>
+        <a class="text-pink-600 hover:underline" href="/faq.html">FAQ</a>
+        <a class="text-pink-600 hover:underline" href="/versand.html">Versand & Rückgabe</a>
+        <a class="text-pink-600 hover:underline" href="/datenschutz.html">Datenschutz</a>
+        <a class="text-pink-600 hover:underline" href="/agb.html">AGB</a>
+        <a class="text-pink-600 hover:underline" href="/impressum.html">Impressum</a>
+        <a class="text-pink-600 hover:underline" href="/presse.html">Presse</a>
+
+      </nav>
+    </div>
+
+  </div>
+
+  <div class="text-center text-xs text-gray-500 py-6">
+    © 2025 Mays Restaurant & Süßspeisen
+  </div>
+</footer>
+
+  <script>
+    const CART = window.MAYS_CART_API || { getCart:()=>[], setCart:()=>{}, refreshBadge:()=>{} };
+    const fmt = c => "€ " + (c/100).toFixed(2).replace(".", ",");
+
+    (async function init(){
+      if (!Array.isArray(window.MAYS_PRODUCTS) || !window.MAYS_PRODUCTS.length) {
+        try{
+          const r = await fetch('/products.json', { cache: 'no-cache' });
+          window.MAYS_PRODUCTS = await r.json();
+        }catch{
+          window.MAYS_PRODUCTS = [];
+        }
+      }
+      renderCart();
+    })();
+
+function renderCart(){
+  const PRODUCTS = window.MAYS_PRODUCTS || [];
+  const list = document.getElementById("cartList");
+  const cart = CART.getCart();
+
+  if(!cart.length){
+    list.innerHTML = `
+      <div class="bg-white rounded-2xl border border-pink-200 p-6 text-center">
+        Dein Warenkorb ist leer.
+        <a class="link ml-1" href="/index.html">Weiter einkaufen</a>
+      </div>`;
+    setTotals(0);
+    document.getElementById("checkoutBtn").classList.add("pointer-events-none","opacity-50");
+    return;
+  }
+  document.getElementById("checkoutBtn").classList.remove("pointer-events-none","opacity-50");
+
+  list.innerHTML = "";
+  let sub = 0;
+
+  cart.forEach((row, idx) => {
+    const productId = row.productId || row.id;
+    const p = PRODUCTS.find(x => x.id === productId);
+    const img = row.image || p?.images?.[0] || '/images/mays.png';
+
+let price = Number(row.price) || 0;
+
+    const line = price * (row.qty || 1);
+    sub += line;
+
+    const el = document.createElement("article");
+    el.className = "relative bg-white rounded-2xl border border-pink-200 p-4 grid grid-cols-[80px,1fr,auto] gap-4 items-center";
+    el.innerHTML = `
+      <button data-del="${idx}" class="absolute top-2 right-2 w-7 h-7 flex items-center justify-center rounded-full border border-pink-200 text-gray-600 hover:text-red-600 bg-white" title="Entfernen">✕</button>
+      <a href="/product.html?id=${productId}">
+        <img src="${img}" class="w-20 h-20 object-cover rounded-lg hover:opacity-80 transition" alt="${row.name}">
+      </a>
+      <div>
+        <a href="/product.html?id=${productId}" class="font-semibold text-pink-600 hover:underline">
+          ${p?.name || row.name?.split(" (")[0] || "Produkt"}
+        </a>
+        ${p?.variants?.length ? `
+          <label class="block text-sm text-gray-600 mt-2">
+            Variante:
+            <select data-variant="${idx}" class="block w-full mt-1 border border-pink-200 rounded-lg px-3 py-1 bg-white">
+              ${p.variants.map(v => `
+                <option value="${v.id}" ${row.variantId === v.id ? "selected" : ""}>
+                  ${v.label} (${fmt(v.price)})
+                </option>`).join("")}
+            </select>
+          </label>
+        ` : (row.variantLabel ? `<div class="text-sm text-gray-500">${row.variantLabel}</div>` : "")}
+
+        <div class="mt-2 flex items-center gap-3">
+          <span class="text-sm text-gray-600">Menge</span>
+          <div class="inline-flex items-center border border-pink-200 rounded-lg overflow-hidden">
+            <button data-minus="${idx}" class="px-3 py-1 bg-white">−</button>
+            <span class="w-10 text-center select-none" data-qty="${idx}">${row.qty}</span>
+            <button data-plus="${idx}" class="px-3 py-1 bg-white">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="text-right font-semibold">${fmt(line)}</div>
+    `;
+    list.appendChild(el);
+  });
+
+  setTotals(sub);
+
+  // Plus / Minus Buttons
+  list.querySelectorAll("[data-plus]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const i = +btn.dataset.plus;
+      const c = CART.getCart();
+      c[i].qty = Math.max(1, (c[i].qty||1) + 1);
+      CART.setCart(c); CART.refreshBadge(); renderCart();
+    });
+  });
+
+  list.querySelectorAll("[data-minus]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const i = +btn.dataset.minus;
+      const c = CART.getCart();
+      c[i].qty = Math.max(1, (c[i].qty||1) - 1);
+      CART.setCart(c); CART.refreshBadge(); renderCart();
+    });
+  });
+
+  // Löschen
+  list.querySelectorAll("[data-del]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const i = +btn.dataset.del;
+      const c = CART.getCart();
+      c.splice(i,1);
+      CART.setCart(c); CART.refreshBadge(); renderCart();
+    });
+  });
+
+  // Varianten ändern
+  list.querySelectorAll("select[data-variant]").forEach(sel => {
+    sel.addEventListener("change", () => {
+      const i = +sel.dataset.variant;
+      const newVariantId = sel.value;
+      const cart = CART.getCart();
+      const product = PRODUCTS.find(p => p.id === cart[i].productId || p.id === cart[i].id);
+      const variant = product?.variants?.find(v => v.id === newVariantId);
+
+      if (variant) {
+        cart[i].variantId = variant.id;
+        cart[i].variantLabel = variant.label;
+        cart[i].price = variant.price;
+        CART.setCart(cart);
+        CART.refreshBadge();
+        renderCart();
+      }
+    });
+  });
+}
+
+    function setTotals(sub){
+      const vat = Math.round(sub * 0.07);
+      const grand = sub;
+      document.getElementById("subTotal").textContent   = fmt(sub);
+      document.getElementById("vat").textContent        = fmt(vat);
+      document.getElementById("grandTotal").textContent = fmt(grand);
+    }
+  </script>
+</body>
+</html>

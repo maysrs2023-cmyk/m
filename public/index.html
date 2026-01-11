@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Mays – Restaurants & Süßspeisen</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="min-h-screen bg-pink-50">
+
+<!-- ================= HEADER ================= -->
+<div class="bg-white border-b border-gray-100">
+  <header class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-[auto,1fr,auto] items-center gap-4">
+
+    <!-- LINKS: MENÜ + LOGO -->
+    <div class="flex items-center gap-3">
+      <button id="menuBtn"
+        class="p-2 rounded-xl border border-pink-200 hover:bg-pink-50"
+        aria-label="Menü öffnen">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="4" y1="7" x2="20" y2="7"/>
+          <line x1="4" y1="12" x2="16" y2="12"/>
+          <line x1="4" y1="17" x2="13" y2="17"/>
+        </svg>
+      </button>
+
+      <a href="/index.html" class="flex items-center">
+        <img src="/images/mays.png"
+             alt="Mays Logo"
+             class="h-16 md:h-36 lg:h-28 w-auto object-contain">
+      </a>
+    </div>
+
+    <!-- MITTE: SUCHE (WIE FRÜHER) -->
+    <form id="searchForm"
+          role="search"
+          class="justify-self-center w-full max-w-xl relative">
+
+      <input
+        id="searchInput"
+        type="search"
+        placeholder="Produkte suchen …"
+        class="w-full rounded-xl border border-pink-200 bg-white
+               pl-11 pr-4 py-2
+               outline-none focus:ring-2 focus:ring-pink-400">
+
+      <button
+        type="submit"
+        aria-label="Suchen"
+        class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="7"/>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+        </svg>
+      </button>
+
+    </form>
+
+    <!-- RECHTS: WARENKORB (WIE FRÜHER) -->
+    <a href="/cart.html"
+       class="justify-self-end relative p-2 rounded-full
+              hover:bg-pink-50 border border-pink-200">
+
+      <svg class="h-6 w-6 text-gray-800" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2">
+        <path d="M3 3h2l2.2 10.5a2 2 0 0 0 2 1.5h8.6a2 2 0 0 0 2-1.6l1.1-6.4H6.1"/>
+        <circle cx="9" cy="20" r="1.6"/>
+        <circle cx="18" cy="20" r="1.6"/>
+      </svg>
+
+      <span id="cartBadge"
+            class="absolute -top-1 -right-1 text-[11px]
+                   bg-pink-500 text-white rounded-full px-1.5 py-0.5">
+        0
+      </span>
+    </a>
+
+  </header>
+
+  <!-- QUICK NAV (UNTER DER SUCHE, WIE DU WILLST) -->
+  <div class="max-w-7xl mx-auto px-4 pb-3">
+    <div class="quick-nav mx-auto">
+      <a href="/produkte.html" class="quick-btn">Alle Produkte</a>
+      <a href="/presse.html" class="quick-btn">In der Presse</a>
+      <a href="/sale.html" class="quick-btn">Sale</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= HERO ================= -->
+<section class="max-w-6xl mx-auto px-3 pt-6 mb-10">
+  <div class="rounded-3xl bg-gradient-to-b from-pink-200/70 to-pink-100 p-10 text-center">
+    <h1 class="text-3xl md:text-4xl font-extrabold text-pink-800">
+      Willkommen bei Mays
+    </h1>
+    <p class="mt-2 text-gray-700">
+      Hausgemachte orientalische Süßspeisen – frisch, fein & mit Liebe.
+    </p>
+  </div>
+</section>
+
+  <!-- Produkte -->
+  <main class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between mb-4">
+  <h2 class="text-2xl font-bold text-pink-700">Unsere Produkte</h2>
+  <a href="/produkte.html"
+     class="inline-flex items-center gap-2 text-pink-600 hover:text-pink-800 font-semibold text-base transition">
+    Mehr anzeigen
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </a>
+</div>
+
+    <div id="productGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"></div>
+    <div id="emptyMsg" class="hidden rounded-2xl bg-white border border-pink-200 p-6 text-center text-gray-600">
+      Bald verfügbar – wir fügen gerade Produkte & Fotos hinzu.
+    </div>
+  </main>
+
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-white border-t border-gray-100 mt-16">
+  <div class="max-w-7xl mx-auto px-4 py-10 grid sm:grid-cols-3 gap-8 text-sm">
+
+    <div>
+      <div class="font-semibold mb-2">Kontakt</div>
+      <div>
+        WhatsApp:
+        <a class="text-pink-600 hover:underline"
+           href="https://wa.me/4917677992233" target="_blank">
+          0176 77 99 22 33
+        </a>
+      </div>
+      <div>
+        E-Mail:
+        <a class="text-pink-600 hover:underline"
+           href="mailto:Mays_r.s@yahoo.com">
+          Mays_r.s@yahoo.com
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="font-semibold mb-2">Adresse</div>
+      <a class="text-pink-600 hover:underline"
+         target="_blank"
+         href="https://www.google.com/maps/dir/?api=1&destination=Lagenbeckerstraße%20104%2C%2049477%20Ibbenbüren">
+        Lagenbecker Straße 104<br>
+        49477 Ibbenbüren
+      </a>
+      <div class="mt-2 text-gray-600">
+        Sommer (Mo–So): 12–21 Uhr<br>
+        Winter (Mo–So): 12–20 Uhr
+      </div>
+    </div>
+
+    <div>
+      <div class="font-semibold mb-2">Infos</div>
+      <nav class="flex flex-wrap gap-3">
+        <a class="text-pink-600 hover:underline" href="/ueber-uns.html">Über uns</a>
+        <a class="text-pink-600 hover:underline" href="/faq.html">FAQ</a>
+        <a class="text-pink-600 hover:underline" href="/versand.html">Versand & Rückgabe</a>
+        <a class="text-pink-600 hover:underline" href="/datenschutz.html">Datenschutz</a>
+        <a class="text-pink-600 hover:underline" href="/agb.html">AGB</a>
+        <a class="text-pink-600 hover:underline" href="/impressum.html">Impressum</a>
+        <a class="text-pink-600 hover:underline" href="/presse.html">Presse</a>
+
+      </nav>
+    </div>
+
+  </div>
+
+  <div class="text-center text-xs text-gray-500 py-6">
+    © 2025 Mays Restaurant & Süßspeisen
+  </div>
+</footer>
+
+
+
+  <!-- Off-Canvas Menü -->
+  <div id="menuBackdrop" class="fixed inset-0 bg-black/30 hidden"></div>
+  <aside id="menuPanel" class="fixed left-0 top-0 h-full w-[280px] bg-white border-r border-pink-200 p-4 translate-x-[-100%] transition-transform">
+    <div class="flex items-center justify-between mb-3">
+      <div class="text-pink-600 font-bold text-lg">Menü</div>
+      <button id="menuClose" class="p-1 rounded hover:bg-pink-50">✕</button>
+    </div>
+
+    <div class="space-y-2">
+      <a href="/index.html" class="btn-wide">Startseite</a>
+<button class="btn-wide cat-btn active" data-cat="Alle">Alle</button>
+<button class="btn-wide cat-btn" data-cat="Süßigkeiten">Süßigkeiten</button>
+<button class="btn-wide cat-btn" data-cat="Salzig">Salzige Gerichte</button>
+<button class="btn-wide cat-btn" data-cat="Gerichte">Gerichte</button>
+<button class="btn-wide cat-btn" data-cat="Getränke">Getränke</button>
+<button class="btn-wide cat-btn" data-cat="Specials">Specials</button>
+
+    </div>
+
+    <hr class="my-4">
+
+    <div class="grid grid-cols-2 gap-2 text-sm">
+      <a class="btn-chip" href="/contact.html">Kontakt</a>
+      <a class="btn-chip" href="/ueber-uns.html">Über uns</a>
+      <a class="btn-chip" href="/faq.html">FAQ</a>
+      <a class="btn-chip" href="/versand.html">Versand & Rückgabe</a>
+      <a class="btn-chip" href="/datenschutz.html">Datenschutz</a>
+      <a class="btn-chip" href="/agb.html">AGB</a>
+    </div>
+  </aside>
+
+  <script src="/script.js"></script>
+
+
+  <!-- Karten-Animationen (wie gehabt) -->
+  <script>
+    (function(){
+      function initCards(){
+        const cards = document.querySelectorAll('#productGrid a, #productGrid .card');
+        cards.forEach((el, i) => {
+          if (!el.classList.contains('card-anim')) {
+            el.classList.add('card-anim', 'reveal');
+            setTimeout(() => el.classList.add('show'), 60 + i * 60);
+            el.addEventListener('mousedown', () => el.classList.add('press'));
+            ['mouseup','mouseleave','blur'].forEach(ev =>
+              el.addEventListener(ev, () => el.classList.remove('press'))
+            );
+          }
+        });
+      }
+      if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initCards);
+      else initCards();
+      const grid = document.getElementById('productGrid');
+      if (grid && 'MutationObserver' in window) {
+        const mo = new MutationObserver(() => initCards());
+        mo.observe(grid, { childList: true, subtree: true });
+      }
+      window.maysInitCards = initCards;
+    })();
+  </script>
+</body>
+</html>

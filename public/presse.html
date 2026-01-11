@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>In der Presse – Mays</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind (wie auf deinen anderen Seiten) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Dein normales CSS -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="bg-pink-50 min-h-screen">
+
+  <!-- HEADER (kannst du später angleichen wie index.html) -->
+ <header class="bg-white border-b border-pink-100">
+  <div class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-[auto,1fr,auto] items-center">
+
+    <!-- LINKS: Zurück -->
+    <a href="/index.html"
+       class="text-pink-600 font-semibold hover:underline">
+      Zurück
+    </a>
+
+    <!-- MITTE: LOGO -->
+    <div class="flex justify-center">
+      <img
+        src="/images/mays.png"
+        alt="Mays Logo"
+        class="h-10 object-contain"
+      />
+    </div>
+
+    <!-- RECHTS: WARENKORB (wie Startseite) -->
+    <a href="/cart.html"
+       class="relative p-2 rounded-full border border-pink-200 hover:bg-pink-50">
+
+      <svg class="h-6 w-6 text-gray-800"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2">
+        <path d="M3 3h2l2.2 10.5a2 2 0 0 0 2 1.5h8.6a2 2 0 0 0 2-1.6l1.1-6.4H6.1"/>
+        <circle cx="9" cy="20" r="1.6"/>
+        <circle cx="18" cy="20" r="1.6"/>
+      </svg>
+
+      <span
+        id="cartBadge"
+        class="absolute -top-1 -right-1 text-[11px] bg-pink-500 text-white rounded-full px-1.5 py-0.5">
+        0
+      </span>
+    </a>
+
+  </div>
+</header>
+
+
+<h1 class="press-heading glow">
+  In der Presse
+</h1>
+
+
+
+
+<article class="press-card">
+
+  <div class="press-source">
+    Quelle: IVZ – Ibbenbürener Volkszeitung
+  </div>
+
+  <h2 class="press-title">
+   In Syrien Lehrer – in Deutschland Konditoren
+  </h2>
+
+  <img
+    src="/images/presse-ivz-mays.jpg"
+    alt="Mays in der Presse"
+    class="press-image"
+  />
+
+  <a
+    href="https://news.ivz-aktuell.de/embedded/article/420352"
+    target="_blank"
+    class="press-link"
+  >
+    Zum Original-Artikel →
+  </a>
+
+</article>
+
+
+  </main>
+
+<footer class="mt-14 bg-white border-t border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 py-10 grid sm:grid-cols-3 gap-8 text-sm">
+    <div>
+      <div class="font-semibold mb-2">Kontakt</div>
+      <div>WhatsApp: <a class="link" href="https://wa.me/4917677992233" target="_blank">0176 77 99 22 33</a></div>
+      <div>E-Mail: <a class="link" href="mailto:Mays_r.s@yahoo.com">Mays_r.s@yahoo.com</a></div>
+    </div>
+    <div>
+      <div class="font-semibold mb-2">Adresse</div>
+      <a class="link" target="_blank"
+         href="https://www.google.com/maps/dir/?api=1&destination=Lagenbeckerstraße%20104%2C%2049477%20Ibbenbüren">
+         Lagenbeckerstraße 104, 49477 Ibbenbüren
+      </a>
+      <div class="mt-2 text-gray-600">
+        Sommer (Mo–So): 12–21 Uhr<br>
+        Winter (Mo–So): 12–20 Uhr
+      </div>
+    </div>
+    <div>
+      <div class="font-semibold mb-2">Infos</div>
+      <nav class="flex flex-wrap gap-3">
+        <a class="link" href="./ueber-uns.html">Über uns</a>
+        <a class="link" href="./faq.html">FAQ</a>
+        <a class="link" href="./versand.html">Versand & Rückgabe</a>
+        <a class="link" href="./datenschutz.html">Datenschutz</a>
+        <a class="link" href="./agb.html">AGB</a>
+      </nav>
+    </div>
+  </div>
+  <div class="text-center text-xs text-gray-500 py-6">© 2025 Mays Restaurants & Süßspeisen</div>
+</footer>
+
+<!-- Warenkorb-Badge aktualisieren -->
+<script>
+  const CART_KEY = "mays_cart";
+  const getCart = () => JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+  const badge = document.getElementById("cartBadge");
+  if (badge) {
+    const n = getCart().reduce((s,i)=>s+(+i.qty||0),0);
+    badge.textContent = n;
+  }
+</script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,2358 @@
+[
+ {
+  "id": "baklava-exzellent",
+  "name": "Pistazien-Baklava Exzellent",
+  "category": "Süßigkeiten",
+  "currency": "EUR",
+  "images": [
+    "/images/baklava-1.jpg",
+    "/images/baklava-2.jpg",
+    "/images/baklava-3.jpg",
+    "/images/baklava-4.jpg"
+  ],
+  "description": "Feine orientalische Baklava mit vielen frischen Pistazien...",
+  "details": [
+    "Zutaten: Filoteig, Butter, tierisches Fett, Zucker, Wasser, Zitronensaft, Pistazien",
+    "Aufbewahrung: 5–7 Tage bei Zimmertemperatur..."
+  ],
+  "stripe_product_id": "prod_TITjJkUQofkprk",
+  "available": true,
+
+  "variants": [
+    {
+      "id": "baklava-exzellent-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SLsmI7Vrq9QN3jULp3njQ5y"
+    },
+    {
+      "id": "baklava-exzellent-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SLsmI7Vrq9QN3jUXpET2s7J"
+    }
+  ],
+
+  "price": 2499,
+  "price_min": 1299,
+  "price_max": 2499
+},
+ {
+  "id": "baklava-standard",
+  "name": "Pistazien-Baklava Standard",
+  "price": 1799,
+  "price_min": 899,
+  "price_max": 1799,
+  "currency": "EUR",
+  "category": "Süßigkeiten",
+  "images": [
+    "/images/baklavaS-1.jpg",
+    "/images/baklavaS-2.jpg",
+    "/images/baklavaS-3.jpg",
+    "/images/baklavaS-4.jpg",
+    "/images/baklavaS-5.jpg"
+  ],
+  "description": "Köstliche Baklava aus dünnem Teig, gefüllt mit hochwertigen Pistazien. Mit pflanzlichem Fett gebacken und etwas süßer im Geschmack – knusprig, süß und unwiderstehlich.",
+  "details": [
+    "Zutaten: Baklava-Teig, Zucker (etwas erhöht), pflanzliches Fett, Pistazien",
+    "Aufbewahrung: Bei 10–20 °C lagern. Nicht im Kühlschrank aufbewahren. Haltbar bis zu 1 Monat."
+  ],
+  "stripe_product_id": "prod_TIgynYmxXCvI7r",
+  "variants": [
+    {
+      "id": "baklava-standard-500g",
+      "label": "500 g",
+      "price": 899,
+      "weight": 500,
+      "stripe_price_id": "price_1SM5ag7Vrq9QN3jUHqWs42wP"
+    },
+    {
+      "id": "baklava-standard-1kg",
+      "label": "1 kg",
+      "price": 1799,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM5fg7Vrq9QN3jUT8ftdJIH"
+    }
+  ],
+  "available": true
+},
+{
+  "id": "baklava-pistazien-premium",
+  "name": "Baklava Pistazien Premium",
+  "category": "Süßigkeiten",
+  "price": 3499,
+  "price_min": 1199,
+  "price_max": 3499,
+  "currency": "EUR",
+  "images": [
+    "/images/baklava-pistazien-premium-1.jpg",
+    "/images/baklava-pistazien-premium-2.jpg",
+    "/images/baklava-pistazien-premium-3.jpg",
+    "/images/baklava-pistazien-premium-4.jpg"
+  ],
+  "description": "Leckere Baklava aus dünnem Teig, gefüllt mit sehr hochwertigen Pistazien. Knusprig, süß, fein und besonders aromatisch.",
+  "details": [
+    "Zutaten: Baklava-Teig, Zucker (wenig), tierisches Fett, Pistazien (Premium)",
+    "Aufbewahrung: Bei 10–20 °C lagern. Nicht im Kühlschrank."
+  ],
+  "stripe_product_id": "prod_TIjSZhvmZgQF7e",
+  "variants": [
+    {
+      "id": "baklava-pistazien-premium-500g",
+      "label": "500 g",
+      "price": 1199,
+      "weight": 500,
+      "stripe_price_id": "price_1SM7ze7Vrq9QN3jUPYI75c1y"
+    },
+    {
+      "id": "baklava-pistazien-premium-1kg",
+      "label": "1 kg",
+      "price": 3499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM83c7Vrq9QN3jUsNyMU4OQ"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "futter": "<div class=\"futter-inner\"><h3>Kontakt & Infos</h3><p>Für Genießer – ein exklusives Geschmackserlebnis.</p></div>",
+  "seo": "baklava-pistazien-premium"
+},
+  {
+  "id": "baklava-cashew",
+  "name": "Baklava mit Cashewkernen",
+  "category": "Süßigkeiten",
+  "price": 1999,
+  "price_min": 999,
+  "price_max": 1999,
+  "currency": "EUR",
+  "images": [
+    "/images/baklava-cashew-1.jpg",
+    "/images/baklava-cashew-2.jpg",
+    "/images/baklava-cashew-3.jpg",
+    "/images/baklava-cashew-4.jpg"
+  ],
+  "description": "Feine Baklava aus dünnem Teig, gefüllt mit köstlichen Cashewkernen. Mit tierischem und pflanzlichem Fett und einer mittleren Zuckermenge gebacken – knusprig, zart und angenehm süß.",
+  "details": [
+    "Zutaten: Baklava-Teig, Zucker (mittel), tierisches und pflanzliches Fett, Cashewkerne",
+    "Aufbewahrung: Bei 10–20 °C lagern. Nicht im Kühlschrank. Haltbar bis zu 1 Monat."
+  ],
+  "stripe_product_id": "prod_TIjmSZFfEXbUcO",
+  "variants": [
+    {
+      "id": "baklava-cashew-500g",
+      "label": "500 g",
+      "price": 999,
+      "weight": 500,
+      "stripe_price_id": "price_1SM8J47Vrq9QN3jUkDySo5qf"
+    },
+    {
+      "id": "baklava-cashew-1kg",
+      "label": "1 kg",
+      "price": 1999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM8J47Vrq9QN3jUeAaAphLf"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "baklava-cashew"
+},
+{
+  "id": "baklava-mix",
+  "name": "Gemischte Baklava – Cashew, Walnuss & Pistazie",
+  "category": "Süßigkeiten",
+  "price": 2199,
+  "price_min": 1099,
+  "price_max": 2199,
+  "currency": "EUR",
+  "images": [
+    "/images/baklava-mix-1.jpg",
+    "/images/baklava-mix-2.jpg",
+    "/images/baklava-mix-3.jpg",
+    "/images/baklava-mix-4.jpg"
+  ],
+  "description": "Eine köstliche Mischung aus Cashew, Walnuss und Pistazie – für alle, die Abwechslung lieben. Mit tierischem und pflanzlichem Fett und einer mittleren Zuckermenge gebacken – knusprig, süß und reich an Geschmack.",
+  "details": [
+    "Zutaten: Baklava-Teig, Zucker (mittel), tierisches und pflanzliches Fett, Cashewkerne, Walnüsse, Pistazien",
+    "Aufbewahrung: Bei 10–20 °C lagern. Nicht im Kühlschrank. Haltbar bis zu 1 Monat."
+  ],
+  "stripe_product_id": "prod_TIjwwbqLVem9XO",
+  "variants": [
+    {
+      "id": "baklava-mix-500g",
+      "label": "500 g",
+      "price": 1099,
+      "weight": 500,
+      "stripe_price_id": "price_1SM8S87Vrq9QN3jUfWcjG7uM"
+    },
+    {
+      "id": "baklava-mix-1kg",
+      "label": "1 kg",
+      "price": 2199,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM8S87Vrq9QN3jUAz00uZTI"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.7,
+  "seo": "baklava-mix"
+},
+{
+  "id": "baklava-walnuss",
+  "name": "Baklava mit Walnüssen",
+  "category": "Süßigkeiten",
+  "price": 1999,
+  "price_min": 999,
+  "price_max": 1999,
+  "currency": "EUR",
+  "images": [
+    "/images/baklava-walnuss-1.jpg",
+    "/images/baklava-walnuss-2.jpg",
+    "/images/baklava-walnuss-3.jpg",
+    "/images/baklava-walnuss-4.jpg",
+    "/images/baklava-walnuss-5.jpg"
+  ],
+  "description": "Leckere Baklava aus hauchdünnem Teig, gefüllt mit aromatischen Walnüssen. Mit tierischem und pflanzlichem Fett und mittlerem Zuckergehalt gebacken – knusprig, nussig und ausgewogen süß.",
+  "details": [
+    "Zutaten: Baklava-Teig, Zucker (mittel), tierisches und pflanzliches Fett, Walnüsse",
+    "Aufbewahrung: Bei 10–20 °C lagern. Nicht im Kühlschrank. Haltbar bis zu 1 Monat."
+  ],
+  "stripe_product_id": "prod_TIk9u5xMzKzSMt",
+  "variants": [
+    {
+      "id": "baklava-walnuss-500g",
+      "label": "500 g",
+      "price": 999,
+      "weight": 500,
+      "stripe_price_id": "price_1SM8fD7Vrq9QN3jUnTRmn1f4"
+    },
+    {
+      "id": "baklava-walnuss-1kg",
+      "label": "1 kg",
+      "price": 1999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM8fD7Vrq9QN3jU1A9B56Em"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "baklava-walnuss"
+},
+{
+  "id": "pistazien-harissa",
+  "name": "Pistazien Harissa",
+  "category": "Süßigkeiten",
+  "price": 1999,
+  "price_min": 999,
+  "price_max": 1999,
+  "currency": "EUR",
+  "images": [
+    "/images/pistazien-harissa-1.jpg",
+    "/images/pistazien-harissa-2.jpg",
+    "/images/pistazien-harissa-3.jpg",
+    "/images/pistazien-harissa-4.jpg"
+  ],
+  "description": "Leckere Pistazien Harissa aus Grieß, Milchpulver, Zucker und gebacken mit 100 % tierischem Fett. Die Oberfläche ist reichlich mit Pistazien bedeckt, jede Stück aromatisch und süß.",
+  "details": [
+    "Zutaten: Grieß, Milchpulver, Zucker, tierisches Fett, Pistazien (oberflächlich, reichlich)",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Harissa nicht austrocknet. Haltbar bis zu 2 Wochen."
+  ],
+  "stripe_product_id": "prod_TIkD2fekl7UXFF",
+  "variants": [
+    {
+      "id": "pistazien-harissa-500g",
+      "label": "500 g",
+      "price": 999,
+      "weight": 500,
+      "stripe_price_id": "price_1SM8im7Vrq9QN3jUpsbnbNXX"
+    },
+    {
+      "id": "pistazien-harissa-1kg",
+      "label": "1 kg",
+      "price": 1999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM8im7Vrq9QN3jUo60ogW6T"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "pistazien-harissa"
+},
+{
+  "id": "harissa-drei-nuesse",
+  "name": "Harissa mit drei Nüssen",
+  "category": "Süßigkeiten",
+  "price": 999,
+  "price_min": 499,
+  "price_max": 999,
+  "currency": "EUR",
+  "images": [
+    "/images/harissa-drei-nuesse-1.jpg",
+    "/images/harissa-drei-nuesse-2.jpg",
+    "/images/harissa-drei-nuesse-3.jpg",
+    "/images/harissa-drei-nuesse-4.jpg"
+  ],
+  "description": "Leckere Harissa aus Grieß, Milchpulver, Zucker und gebacken mit 100 % tierischem Fett. Obenauf mit drei Sorten Nüssen – Pistazien, Cashew und Mandeln – jede Stück nur mit einer Nuss verziert.",
+  "details": [
+    "Zutaten: Grieß, Milchpulver, Zucker, tierisches Fett, Pistazien, Cashewkerne, Mandeln",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Harissa nicht austrocknet. Haltbar bis zu 2 Wochen."
+  ],
+  "stripe_product_id": "prod_TIkHiF5ZtPbTxL",
+  "variants": [
+    {
+      "id": "harissa-drei-nuesse-500g",
+      "label": "500 g",
+      "price": 499,
+      "weight": 500,
+      "stripe_price_id": "price_1SM8mz7Vrq9QN3jUAekCodcW"
+    },
+    {
+      "id": "harissa-drei-nuesse-1kg",
+      "label": "1 kg",
+      "price": 999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM8mz7Vrq9QN3jUWmg6Zy02"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.7,
+  "seo": "harissa-drei-nuesse"
+},
+{
+  "id": "harissa-schoko",
+  "name": "Schokoladen Harissa",
+  "category": "Süßigkeiten",
+  "price": 1499,
+  "price_min": 799,
+  "price_max": 1499,
+  "currency": "EUR",
+  "images": [
+    "/images/harissa-schoko-1.jpg",
+    "/images/harissa-schoko-2.jpg",
+    "/images/harissa-schoko-3.jpg",
+    "/images/harissa-schoko-4.jpg"
+  ],
+  "description": "Leckere Schokoladen-Harissa aus Grieß, Milchpulver, Zucker und gebacken mit 100 % tierischem Fett. Mit Kakaopulver im Teig und einem Kakaosaucen-Topping, bestreut mit Pistazienpulver. Aromatisch und süß – jede Stück ein Genuss.",
+  "details": [
+    "Zutaten: Grieß, Milchpulver, Zucker, tierisches Fett, Kakaopulver, Kakaosauce, Pistazienpulver",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Harissa nicht austrocknet. Haltbar bis zu 2 Wochen."
+  ],
+  "stripe_product_id": "prod_TIkKPj5Fj8vV93",
+  "variants": [
+    {
+      "id": "harissa-schoko-500g",
+      "label": "500 g",
+      "price": 799,
+      "weight": 500,
+      "stripe_price_id": "price_1SM8q47Vrq9QN3jU68fX14Ok"
+    },
+    {
+      "id": "harissa-schoko-1kg",
+      "label": "1 kg",
+      "price": 1499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM8q47Vrq9QN3jU0RM1v5yb"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "harissa-schoko"
+},
+{
+  "id": "asch-al-bulbul",
+  "name": "Asch al Bulbul",
+  "category": "Süßigkeiten",
+  "price": 2499,
+  "price_min": 1299,
+  "price_max": 2499,
+  "currency": "EUR",
+  "images": [
+    "/images/asch-al-bulbul-1.jpg",
+    "/images/asch-al-bulbul-2.jpg",
+    "/images/asch-al-bulbul-3.jpg",
+    "/images/asch-al-bulbul-4.jpg",
+    "/images/asch-al-bulbul-5.jpg",
+    "/images/asch-al-bulbul-6.jpg"
+  ],
+  "description": "Leckeres Ash Al BulBul aus Fadenteig (Kadayif / derselbe Teig wie in Dubai-Schokolade), gebacken mit tierischem und pflanzlichem Fett. Gefüllt mit Mandeln, Cashew, Pistazien und Walnüssen – aromatisch, süß und nussig im Geschmack.",
+  "details": [
+    "Zutaten: Fadenteig, tierisches und pflanzliches Fett, Zucker, Mandeln, Cashewkerne, Pistazien, Walnüsse",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Masse nicht austrocknet. Haltbar bis zu 2 Wochen."
+  ],
+  "stripe_product_id": "prod_TIkQwF3K0faBMD",
+  "variants": [
+    {
+      "id": "asch-al-bulbul-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SM8vH7Vrq9QN3jUxkQc9yDA"
+    },
+    {
+      "id": "asch-al-bulbul-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM8vH7Vrq9QN3jU02WmVr2E"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "asch-al-bulbul"
+},
+{
+  "id": "taj-al-malik",
+  "name": "Taj Al-Malik",
+  "category": "Süßigkeiten",
+  "price": 199,
+  "price_min": 199,
+  "price_max": 199,
+  "currency": "EUR",
+  "images": [
+    "/images/taj-al-malik-1.jpg",
+    "/images/taj-al-malik-2.jpg",
+    "/images/taj-al-malik-3.jpg",
+    "/images/taj-al-malik-4.jpg"
+  ],
+  "description": "Leckeres Taj Al-Malik aus Fadenteig (Kadayif), gebacken mit tierischem und pflanzlichem Fett und überzogen mit Zuckersirup (Qatar). Jedes große Stück ist dekoriert mit Mandeln, Cashew und Pistazien – aromatisch, süß und nussig im Geschmack.",
+  "details": [
+    "Zutaten: Fadenteig, tierisches und pflanzliches Fett, Zucker, Mandeln, Cashewkerne, Pistazien",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Masse nicht austrocknet. Haltbar bis zu 2 Wochen."
+  ],
+  "stripe_product_id": "prod_TIkWWVnf7xo29d",
+  "variants": [
+    {
+      "id": "taj-al-malik-stk",
+      "label": "1 Stück",
+      "price": 199,
+      "weight": 200,
+      "stripe_price_id": "price_1SM91e7Vrq9QN3jUdqYt7P5v"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "taj-al-malik"
+},
+{
+  "id": "asch-al-bulbul-premium",
+  "name": "Ash Al BulBul Premium",
+  "category": "Süßigkeiten",
+  "price": 3499,
+  "price_min": 1799,
+  "price_max": 3499,
+  "currency": "EUR",
+  "images": [
+    "/images/asch-al-bulbul-premium-1.jpg",
+    "/images/asch-al-bulbul-premium-2.jpg",
+    "/images/asch-al-bulbul-premium-3.jpg",
+    "/images/asch-al-bulbul-premium-4.jpg"
+  ],
+  "description": "Leckeres Ash Al BulBul Premium aus Fadenteig (Kadayif), gebacken mit hochwertigem tierischem Fett. Gefüllt und dekoriert ausschließlich mit hochwertigem Pistazienkern – aromatisch, süß und nussig im Geschmack. Keine weiteren Nüsse oder Zutaten.",
+  "details": [
+    "Zutaten: Fadenteig, hochwertiges tierisches Fett, Zucker, Pistazien-Halabi (Premium)",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Masse nicht austrocknet. Haltbar bis zu 2 Wochen."
+  ],
+  "stripe_product_id": "prod_TIkiWfK2oJjrmd",
+  "variants": [
+    {
+      "id": "asch-al-bulbul-premium-500g",
+      "label": "500 g",
+      "price": 1799,
+      "weight": 500,
+      "stripe_price_id": "price_1SM9DD7Vrq9QN3jUgqFWPWUc"
+    },
+    {
+      "id": "asch-al-bulbul-premium-1kg",
+      "label": "1 kg",
+      "price": 3499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM9DD7Vrq9QN3jUKKnwwuyy"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 5.0,
+  "seo": "asch-al-bulbul-premium"
+},
+{
+  "id": "knafeh-sticks-pistazie",
+  "name": "Pistazien-Knafeh-Sticks (Fadenteig)",
+  "category": "Süßigkeiten",
+  "price": 3499,
+  "price_min": 1799,
+  "price_max": 3499,
+  "currency": "EUR",
+  "images": [
+    "/images/knafeh-sticks-pistazie-1.jpg",
+    "/images/knafeh-sticks-pistazie-2.jpg",
+    "/images/knafeh-sticks-pistazie-3.jpg"
+  ],
+  "description": "Leckere Pistazien-Knafeh-Sticks (Fadenteig), gebacken mit hochwertigem tierischem Fett und leichtem Zuckerüberzug. Gefüllt und dekoriert mit hochwertigen Pistazien – aromatisch, süß und nussig im Geschmack.",
+  "details": [
+    "Zutaten: Fadenteig, hochwertiges tierisches Fett, Zucker (leicht), Pistazien-Halabi (Premium)",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Masse nicht austrocknet. Haltbar bis zu 2 Wochen."
+  ],
+  "stripe_product_id": "prod_TIkm7ozQNEgYFX",
+  "variants": [
+    {
+      "id": "knafeh-sticks-pistazie-500g",
+      "label": "500 g",
+      "price": 1799,
+      "weight": 500,
+      "stripe_price_id": "price_1SM9HH7Vrq9QN3jUtR95xzrC"
+    },
+    {
+      "id": "knafeh-sticks-pistazie-1kg",
+      "label": "1 kg",
+      "price": 3499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM9HH7Vrq9QN3jUKbhUZkxe"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "knafeh-sticks-pistazie"
+},
+{
+  "id": "boulouria-hamra",
+  "name": "Boulouria Hamra (Rotes Boulouria)",
+  "category": "Süßigkeiten",
+  "price": 3499,
+  "price_min": 1799,
+  "price_max": 3499,
+  "currency": "EUR",
+  "images": [
+    "/images/boulouria-hamra-1.jpg",
+    "/images/boulouria-hamra-2.jpg",
+    "/images/boulouria-hamra-3.jpg",
+    "/images/boulouria-hamra-4.jpg"
+  ],
+  "description": "Leckere rotes Boulouria aus Fadenteig (Kadayif), gebacken mit 100 % hochwertigem tierischem Fett. Die Spezialität besteht aus zwei Schichten Kadayif – eine oben, eine unten – und in der Mitte eine Füllung aus Pistazien mit Zucker, die die beiden Kadayif-Schichten verbindet. Aromatisch, süß und nussig im Geschmack.",
+  "details": [
+    "Zutaten: Fadenteig, 100 % tierisches Fett, Zucker, Pistazien (Füllung)",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Masse nicht austrocknet. Haltbar bis zu 2 Wochen."
+  ],
+  "stripe_product_id": "prod_TIkqUfLl6UJoGl",
+  "variants": [
+    {
+      "id": "boulouria-hamra-500g",
+      "label": "500 g",
+      "price": 1799,
+      "weight": 500,
+      "stripe_price_id": "price_1SM9Ku7Vrq9QN3jUhiDkmbPE"
+    },
+    {
+      "id": "boulouria-hamra-1kg",
+      "label": "1 kg",
+      "price": 3499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM9Ku7Vrq9QN3jUAXn7HhKB"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 5.0,
+  "seo": "boulouria-hamra"
+},
+{
+  "id": "boulouria-bayda",
+  "name": "Boulouria Bayda (Weiße Boulouria)",
+  "category": "Süßigkeiten",
+  "price": 3499,
+  "price_min": 1799,
+  "price_max": 3499,
+  "currency": "EUR",
+  "images": [
+    "/images/boulouria-bayda-1.jpg",
+    "/images/boulouria-bayda-2.jpg",
+    "/images/boulouria-bayda-3.jpg",
+    "/images/boulouria-bayda-4.jpg"
+  ],
+  "description": "Leckere “Boulouria Bayda” (Weiße Boulouria) aus Fadenteig (Kadayif), gebacken mit hochwertigem tierischem Fett (Premiumqualität). Gefüllt und dekoriert mit hochwertigen Pistazien, leichtem Zuckerüberzug (Qatar) und verfeinert mit Orangenblütenwasser.",
+  "details": [
+    "Zutaten: Fadenteig, Premium-tierisches Fett, Zucker (leicht), Pistazien (Halabi, erste Qualität), Orangenblütenwasser",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Masse nicht austrocknet. Haltbar bis zu 2 Wochen."
+  ],
+  "stripe_product_id": "prod_TIkvc4UsdjAAVi",
+  "variants": [
+    {
+      "id": "boulouria-bayda-500g",
+      "label": "500 g",
+      "price": 1799,
+      "weight": 500,
+      "stripe_price_id": "price_1SM9Pk7Vrq9QN3jUbjhB0Z5x"
+    },
+    {
+      "id": "boulouria-bayda-1kg",
+      "label": "1 kg",
+      "price": 3499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM9Pk7Vrq9QN3jUQU24c6WB"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 5.0,
+  "seo": "boulouria-bayda"
+},
+{
+  "id": "suwar-al-sitt",
+  "name": "Suwar Al-Sitt",
+  "category": "Süßigkeiten",
+  "price": 3499,
+  "price_min": 1799,
+  "price_max": 3499,
+  "currency": "EUR",
+  "images": [
+    "/images/suwar-al-sitt-1.jpg",
+    "/images/suwar-al-sitt-2.jpg",
+    "/images/suwar-al-sitt-3.jpg",
+    "/images/suwar-al-sitt-4.jpg"
+  ],
+  "description": "Leckere Baklava Pistazien (Suwar Al-Sitt) aus dünnem Teig, gebacken mit hochwertigem tierischem Fett und leichtem Zuckerüberzug (Qatar). Gefüllt mit hochwertigen Pistazien – aromatisch, süß und fein im Geschmack.",
+  "details": [
+    "Zutaten: Baklava-Teig, Premium-tierisches Fett, Zucker (leicht), Pistazien (Halabi, Premium)",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Masse nicht austrocknet. Haltbar bis zu 1 Monat."
+  ],
+  "stripe_product_id": "prod_TIkzLefqHlxmtq",
+  "variants": [
+    {
+      "id": "suwar-al-sitt-500g",
+      "label": "500 g",
+      "price": 1799,
+      "weight": 500,
+      "stripe_price_id": "price_1SM9Tp7Vrq9QN3jU3Rkt0jOS"
+    },
+    {
+      "id": "suwar-al-sitt-1kg",
+      "label": "1 kg",
+      "price": 3499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM9Tp7Vrq9QN3jUKcpvub3Z"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 5.0,
+  "seo": "suwar-al-sitt"
+},
+{
+  "id": "yalberq-baklava",
+  "name": "Yalberq Baklava",
+  "category": "Süßigkeiten",
+  "price": 3499,
+  "price_min": 1799,
+  "price_max": 3499,
+  "currency": "EUR",
+  "images": [
+    "/images/yalberq-baklava-1.jpg",
+    "/images/yalberq-baklava-2.jpg",
+    "/images/yalberq-baklava-3.jpg",
+    "/images/yalberq-baklava-4.jpg"
+  ],
+  "description": "Leckere “Yalberq Baklava” – Grüne Pistazien-Sticks aus dünnem Baklava-Teig, gebacken mit 100 % hochwertigem tierischem Fett. Gefüllt mit hochwertigen grünen Pistazien (Pistazien, Premiumqualität) und leichtem Zuckerüberzug (Qatar), auf leichtem Baklava-Blattteig serviert – aromatisch, süß und nussig im Geschmack.",
+  "details": [
+    "Zutaten: Baklava-Teig, 100 % tierisches Fett, Zucker (leicht), Pistazien (grün, Halabi, Premium)",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Masse nicht austrocknet. Haltbar bis zu 1 Monat."
+  ],
+  "stripe_product_id": "prod_TIl3MGSCvV8Efc",
+  "variants": [
+    {
+      "id": "yalberq-baklava-500g",
+      "label": "500 g",
+      "price": 1799,
+      "weight": 500,
+      "stripe_price_id": "price_1SM9Xl7Vrq9QN3jUS65qCGDc"
+    },
+    {
+      "id": "yalberq-baklava-1kg",
+      "label": "1 kg",
+      "price": 3499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM9Xl7Vrq9QN3jU5PqL0iD0"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 5.0,
+  "seo": "yalberq-baklava"
+},
+{
+  "id": "al-faisalya",
+  "name": "Al-Faisalya",
+  "category": "Süßigkeiten",
+  "price": 399,
+  "price_min": 399,
+  "price_max": 399,
+  "currency": "EUR",
+  "images": [
+    "/images/al-faisalya-1.jpg",
+    "/images/al-faisalya-2.jpg",
+    "/images/al-faisalya-3.jpg",
+    "/images/al-faisalya-4.jpg",
+    "/images/al-faisalya-5.jpg"
+  ],
+  "description": "Leckere “Al-Faisalya” aus Fadenteig (Kadayif), gebacken mit einer Mischung aus hochwertigem tierischem und pflanzlichem Fett. Die Spezialität besteht aus großen Stücken, gefüllt mit hochwertigem Pistazienkern – aromatisch, süß und nussig im Geschmack.",
+  "details": [
+    "Zutaten: Fadenteig, hochwertige Mischung aus tierischem und pflanzlichem Fett, Zucker, Pistazien (Premium)",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Masse nicht austrocknet. Haltbar bis zu zwei Monate"
+  ],
+  "stripe_product_id": "prod_TIl8Y5DejndXkC",
+  "variants": [
+    {
+      "id": "al-faisalya-stück",
+      "label": "1 Stück",
+      "price": 399,
+      "weight": 200,
+      "stripe_price_id": "price_1SM9cD7Vrq9QN3jUNGGlMJqC"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 5.0,
+  "seo": "al-faisalya"
+},
+{
+  "id": "pistazien-warbat",
+  "name": "Pistazien-Warbat",
+  "category": "Süßigkeiten",
+  "price": 399,
+  "price_min": 399,
+  "price_max": 399,
+  "currency": "EUR",
+  "images": [
+    "/images/pistazien-warbat-1.jpg",
+    "/images/pistazien-warbat-2.jpg",
+    "/images/pistazien-warbat-3.jpg",
+    "/images/pistazien-warbat-4.jpg",
+    "/images/pistazien-warbat-5.jpg"
+  ],
+  "description": "Leckere Pistazien-Warbat aus Baklava-Blättern, gefüllt mit hochwertigen Pistazien. Die Stücke werden mit einer Mischung aus tierischem und pflanzlichem Fett gebacken, aromatisch, süß und nussig im Geschmack.",
+  "details": [
+    "Zutaten: Baklava-Blätter, hochwertige Mischung aus tierischem und pflanzlichem Fett, Zucker, Pistazien-Halabi (Premium)",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Masse nicht austrocknet. Haltbar bis zu 2 Monate."
+  ],
+  "stripe_product_id": "prod_TIl9E1hN4CfNXP",
+  "variants": [
+    {
+      "id": "pistazien-warbat-stück",
+      "label": "1 Stück",
+      "price": 399,
+      "weight": 150,
+      "stripe_price_id": "price_1SM9dN7Vrq9QN3jUcIOKKTi3"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 5.0,
+  "seo": "pistazien-warbat"
+},
+{
+  "id": "tamriya",
+  "name": "Tamriya",
+  "category": "Süßigkeiten",
+  "price": 2999,
+  "price_min": 1499,
+  "price_max": 2999,
+  "currency": "EUR",
+  "images": [
+    "/images/tamriya-1.jpg",
+    "/images/tamriya-2.jpg",
+    "/images/tamriya-3.jpg",
+    "/images/tamriya-4.jpg",
+    "/images/tamriya-5.jpg",
+    "/images/tamriya-6.jpg"
+  ],
+  "description": "Leckere Tamriya aus Datteln, gemischt mit Butter und Keksen und garniert auf der Oberfläche mit drei Arten von Nüssen – Mandeln, Cashew und Pistazien-Halabi. Die Masse wird zusätzlich mit Zuckersirup (Qatar) verfeinert und es werden Kardamomkörner mit den Datteln vermischt, um ein aromatisches, süßes Geschmackserlebnis zu schaffen.",
+  "details": [
+    "Zutaten: Datteln, Butter, Kekse, Mandeln, Cashewkerne, Pistazien-Halabi, Kardamom, Zucker (Qatar)",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Masse frisch bleibt. Haltbar bis zu 1 Jahr."
+  ],
+  "stripe_product_id": "prod_TIlBsyhl2ck3UI",
+  "variants": [
+    {
+      "id": "tamriya-500g",
+      "label": "500 g",
+      "price": 1499,
+      "weight": 500,
+      "stripe_price_id": "price_1SM9fP7Vrq9QN3jUfg6WxiqR"
+    },
+    {
+      "id": "tamriya-1kg",
+      "label": "1 kg",
+      "price": 2999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM9fP7Vrq9QN3jU6dY7RRox"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 5.0,
+  "seo": "tamriya"
+},
+{
+  "id": "maamoul-dattel",
+  "name": "Maamoul mit Dattelfüllung",
+  "category": "Süßigkeiten",
+  "price": 2499,
+  "price_min": 1299,
+  "price_max": 2499,
+  "currency": "EUR",
+  "images": [
+    "/images/maamoul-dattel-1.jpg",
+    "/images/maamoul-dattel-2.jpg",
+    "/images/maamoul-dattel-3.jpg",
+    "/images/maamoul-dattel-4.jpg",
+    "/images/maamoul-dattel-5.jpg"
+  ],
+  "description": "Leckere Maamoul mit Dattelfüllung aus Teig mit tierischer Butter gefüllt mit Dattelpaste, aromatisiert mit Mahleb und leichtem Zucker.",
+  "details": [
+    "Zutaten: Mehl, tierische Butter (Smen), Dattelpaste, Mahleb, Zucker",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit der Teig frisch bleibt. Haltbar bis zu 1 Monat."
+  ],
+  "stripe_product_id": "prod_TIlEG52mHQXhNj",
+  "variants": [
+    {
+      "id": "maamoul-dattel-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SM9hz7Vrq9QN3jUcokapkEi"
+    },
+    {
+      "id": "maamoul-dattel-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM9hz7Vrq9QN3jU0XgkVG42"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "maamoul-dattel"
+},
+{
+  "id": "barazek",
+  "name": "Barazek",
+  "category": "Süßigkeiten",
+  "price": 2199,
+  "price_min": 1099,
+  "price_max": 2199,
+  "currency": "EUR",
+  "images": [
+    "/images/barazek-1.jpg",
+    "/images/barazek-2.jpg",
+    "/images/barazek-3.jpg",
+    "/images/barazek-4.jpg",
+    "/images/barazek-5.jpg"
+  ],
+  "description": "Leckere Barazek aus Teig mit Milchpulver, Zucker, tierischem Fett und Sesam. Knusprig, aromatisch, süß und nussig im Geschmack.",
+  "details": [
+    "Zutaten: Milchpulver, Mehl, Zucker, tierisches Fett, Pistazien-Halabi, Sesam",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit der Teig frisch bleibt. Haltbar bis zu 1 Monat."
+  ],
+  "stripe_product_id": "prod_TIlHmQc9gDomTp",
+  "variants": [
+    {
+      "id": "barazek-500g",
+      "label": "500 g",
+      "price": 1099,
+      "weight": 500,
+      "stripe_price_id": "price_1SM9l97Vrq9QN3jUQpZtdlZL"
+    },
+    {
+      "id": "barazek-1kg",
+      "label": "1 kg",
+      "price": 2199,
+      "weight": 1000,
+      "stripe_price_id": "price_1SM9l97Vrq9QN3jUbHva0cAx"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "barazek"
+},
+{
+  "id": "biyoutifour",
+  "name": "Biyoutifour",
+  "category": "Süßigkeiten",
+  "price": 2499,
+  "price_min": 1299,
+  "price_max": 2499,
+  "currency": "EUR",
+  "images": [
+    "/images/biyoutifour-1.jpg",
+    "/images/biyoutifour-2.jpg",
+    "/images/biyoutifour-3.jpg",
+    "/images/biyoutifour-4.jpg"
+  ],
+  "description": "Leckere Biyoutifour aus hochwertiger tierischer Butter, Mehl, Kakao, weißer und dunkler Schokolade und Zucker.",
+  "details": [
+    "Zutaten: Tiersche Butter, Mehl, Kakao, weiße Schokolade, dunkle Schokolade, Zucker",
+    "Aufbewahrung: Bei 10–20 °C lagern. An einem luftdichten Ort aufbewahren oder abdecken, damit die Kekse frisch bleiben. Haltbar bis zu 6 Monate."
+  ],
+  "stripe_product_id": "prod_TImYfQB7AlWYUc",
+  "variants": [
+    {
+      "id": "biyoutifour-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SMAzr7Vrq9QN3jUufYhj2rX"
+    },
+    {
+      "id": "biyoutifour-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMAzr7Vrq9QN3jUAaZxz0qm"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "biyoutifour"
+},
+{
+  "id": "halawa-al-jibn",
+  "name": "Halawa al-Jibn",
+  "category": "Süßigkeiten",
+  "price": 1999,
+  "price_min": 999,
+  "price_max": 1999,
+  "currency": "EUR",
+  "pickup_only": true,
+  "images": [
+    "/images/halawa-al-jibn-1.jpg",
+    "/images/halawa-al-jibn-2.jpg",
+    "/images/halawa-al-jibn-3.jpg",
+    "/images/halawa-al-jibn-4.jpg",
+    "/images/halawa-al-jibn-5.jpg"
+  ],
+  "description": "Leckere Käse-Süßigkeit (Halawa al-Jibn) aus Grießteig, hergestellt aus Grieß, geriebenem Käse, Zucker, Wasser und Orangenblütenwasser. Gefüllt mit einer Crememischung aus Mascarpone, arabischer Sahne, Milch, Sahne und Stärke. Obenauf mit Pistazien garniert.",
+  "details": [
+    "Zutaten: Grieß, geriebener Käse, Zucker, Wasser, Orangenblütenwasser, Mascarpone, arabische Sahne, Milch, Sahne, Stärke, Pistazien-Halabi",
+    "Aufbewahrung: Im Kühlschrank lagern und mit Folie abdecken. Haltbar bis zu 1 Woche."
+  ],
+  "stripe_product_id": "prod_TImbXsCwIfPB56",
+  "variants": [
+    {
+      "id": "halawa-al-jibn-500g",
+      "label": "500 g",
+      "price": 999,
+      "weight": 500,
+      "stripe_price_id": "price_1SMB2C7Vrq9QN3jUf5H0uYgG"
+    },
+    {
+      "id": "halawa-al-jibn-1kg",
+      "label": "1 kg",
+      "price": 1999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMB2C7Vrq9QN3jUbTIVz3Az"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "halawa-al-jibn"
+},
+{
+  "id": "warbat-sahne",
+  "name": "Warbat mit Sahnefüllung",
+  "category": "Süßigkeiten",
+  "price": 350,
+  "price_min": 350,
+  "price_max": 350,
+  "currency": "EUR",
+  "pickup_only": true,
+  "images": [
+    "/images/warbat-sahne-1.jpg",
+    "/images/warbat-sahne-2.jpg",
+    "/images/warbat-sahne-3.jpg",
+    "/images/warbat-sahne-4.jpg",
+    "/images/warbat-sahne-5.jpg"
+  ],
+  "description": "Leckere Warbat mit Sahnefüllung aus feinem Baklava-Teig, gefüllt mit einer Crememischung aus Mascarpone, arabischer Sahne, Milch, Sahne und Stärke. Obenauf wird sie mit Pistazien-Halabi garniert.",
+  "details": [
+    "Zutaten: Baklava-Teig, Mascarpone, arabische Sahne, Milch, Sahne, Stärke, Pistazien-Halabi",
+    "Aufbewahrung: Im Kühlschrank lagern und mit Folie abdecken. Haltbar bis zu 1 Woche."
+  ],
+  "stripe_product_id": "prod_TImd966jwEgoQQ",
+  "variants": [
+    {
+      "id": "warbat-sahne-stk",
+      "label": "1 Stück",
+      "price": 350,
+      "weight": 150,
+      "stripe_price_id": "price_1SMB447Vrq9QN3jUq2nt4dcq"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "warbat-sahne"
+},
+{
+  "id": "atayef",
+  "name": "Atayef",
+  "category": "Süßigkeiten",
+  "price": 1499,
+  "price_min": 799,
+  "price_max": 1499,
+  "currency": "EUR",
+  "pickup_only": true,
+  "images": [
+    "/images/atayef-1.jpg",
+    "/images/atayef-2.jpg",
+    "/images/atayef-3.jpg",
+    "/images/atayef-4.jpg"
+  ],
+  "description": "Leckere Atayef – ein traditionelles orientalisches Dessert aus Grieß, Wasser, Milchpulver, Mehl, Backpulver. Der Teig wird gebacken, anschließend mit einer Crememischung aus gekochter Milch, Stärke, Mascarpone und arabischer Sahne gefüllt. Vor dem Servieren werden die Stücke in Öl frittiert und mit Zuckersirup übergossen.",
+  "details": [
+    "Zutaten: Grieß, Wasser, Milchpulver, Mehl, Backpulver, Milch, Stärke, Mascarpone, arabische Sahne, Zuckersirup",
+    "Aufbewahrung: Nur Selbstabholung (kein Versand). Haltbar 1 Tag. Im Kühlschrank lagern und mit Folie abdecken."
+  ],
+  "stripe_product_id": "prod_TImjxDg0yADU4N",
+  "variants": [
+    {
+      "id": "atayef-500g",
+      "label": "500 g",
+      "price": 799,
+      "weight": 500,
+      "stripe_price_id": "price_1SMB9x7Vrq9QN3jUaDUUk6tE"
+    },
+    {
+      "id": "atayef-1kg",
+      "label": "1 kg",
+      "price": 1499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMB9x7Vrq9QN3jURY44nIF7"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.7,
+  "seo": "atayef"
+},
+{
+  "id": "lokum-rot",
+  "name": "Rote Lokum-Rollen",
+  "category": "Süßigkeiten",
+  "price": 2499,
+  "price_min": 1299,
+  "price_max": 2499,
+  "currency": "EUR",
+  "images": [
+    "/images/lokum-rot-1.jpg",
+    "/images/lokum-rot-2.jpg",
+    "/images/lokum-rot-3.jpg",
+    "/images/lokum-rot-4.jpg"
+  ],
+  "description": "Leckere rote Lokum-Rollen mit einer zarten Schicht aus Kokosraspeln, gefüllt mit einer feinen Creme und veredelt mit Pistazien-Halabi im Inneren.",
+  "details": [
+    "Zutaten: Zucker, Stärke, Wasser, Kokosraspeln, Pistazien, Milchcreme, natürliche Farbstoffe",
+    "Aufbewahrung: Bei 10–20 °C lagern und mit Folie abdecken. Haltbar bis zu 1 Jahr."
+  ],
+  "stripe_product_id": "prod_TImqEIQlQ6fVXF",
+  "variants": [
+    {
+      "id": "lokum-rot-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBH67Vrq9QN3jUexlO7ovo"
+    },
+    {
+      "id": "lokum-rot-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBH67Vrq9QN3jUIn114uy2"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "lokum-rot"
+},
+{
+  "id": "lokum-pistazien-rosen",
+  "name": "Rote Lokum-Rollen mit Pistazienüberzug",
+  "category": "Süßigkeiten",
+  "price": 2499,
+  "price_min": 1299,
+  "price_max": 2499,
+  "currency": "EUR",
+  "images": [
+    "/images/lokum-pistazien-rosen-1.jpg",
+    "/images/lokum-pistazien-rosen-2.jpg",
+    "/images/lokum-pistazien-rosen-3.jpg",
+    "/images/lokum-pistazien-rosen-4.jpg"
+  ],
+  "description": "Feine rote Lokum-Rollen, umhüllt von gemahlenen Pistazien und dekoriert mit Rosenblättern. Innen zart gefüllt mit einer leichten Milchcreme – eine perfekte Kombination aus süß, nussig und aromatisch.",
+  "details": [
+    "Zutaten: Zucker, Stärke, Wasser, Kokosraspeln, Pistazien, Milchcreme, Rosenblätter, natürliche Farbstoffe",
+    "Aufbewahrung: Bei 10–20 °C lagern und mit Folie abdecken. Haltbar bis zu 1 Jahr."
+  ],
+  "stripe_product_id": "prod_TImn47XFQ7qetO",
+  "variants": [
+    {
+      "id": "lokum-pistazien-rosen-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBEM7Vrq9QN3jUYEMd4Jop"
+    },
+    {
+      "id": "lokum-pistazien-rosen-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBEN7Vrq9QN3jUvNq78tEm"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "lokum-pistazien-rosen"
+},
+{
+  "id": "lokum-rot-pur",
+  "name": "Rote Lokum-Rollen (gefüllt mit Creme & Pistazien)",
+  "category": "Süßigkeiten",
+  "price": 2499,
+  "price_min": 1299,
+  "price_max": 2499,
+  "currency": "EUR",
+  "images": [
+    "/images/lokum-rot-pur-1.jpg",
+    "/images/lokum-rot-pur-2.jpg",
+    "/images/lokum-rot-pur-3.jpg",
+    "/images/lokum-rot-pur-4.jpg"
+  ],
+  "description": "Leckere rote Lokum-Rollen, gefüllt mit einer feinen Creme und veredelt mit Pistazien-Halabi im Inneren.",
+  "details": [
+    "Zutaten: Zucker, Stärke, Wasser, Pistazien, Milchcreme, natürliche Farbstoffe",
+    "Aufbewahrung: Bei 10–20 °C lagern und mit Folie abdecken. Haltbar bis zu 1 Jahr."
+  ],
+  "stripe_product_id": "prod_TImqEIQlQ6fVXF",
+  "variants": [
+    {
+      "id": "lokum-rot-pur-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBH67Vrq9QN3jUexlO7ovo"
+    },
+    {
+      "id": "lokum-rot-pur-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBH67Vrq9QN3jUIn114uy2"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.7,
+  "seo": "lokum-rot-pur"
+},
+{
+  "id": "lokumrolle-weiss",
+  "name": "Lokumrolle Weiß mit Nüssen & Rosen",
+  "category": "Süßigkeiten",
+  "price": 2499,
+  "price_min": 1299,
+  "price_max": 2499,
+  "currency": "EUR",
+  "images": [
+    "/images/lokumrolle-weiss-1.jpg",
+    "/images/lokumrolle-weiss-2.jpg",
+    "/images/lokumrolle-weiss-3.jpg",
+    "/images/lokumrolle-weiss-4.jpg"
+  ],
+  "description": "Feine weiße Lokumrolle mit weicher Nougatmasse, gefüllt mit Nüssen und dekoriert mit Rosenblättern. Überzogen mit feinem Pistazienpulver – cremig, süß und aromatisch.",
+  "details": [
+    "Zutaten: Zucker, Stärke, Wasser, Pistazien, Cashew, Walnüsse, natürliche Aromen, Rosenblätter",
+    "Aufbewahrung: Bei 10–20 °C lagern. Mit Folie abdecken. Haltbar bis zu 1 Jahr."
+  ],
+  "stripe_product_id": "prod_TImwARY2DXtw3G",
+  "variants": [
+    {
+      "id": "lokumrolle-weiss-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBMU7Vrq9QN3jUpTDWoSKf"
+    },
+    {
+      "id": "lokumrolle-weiss-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBMU7Vrq9QN3jU7i3ATzYn"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "lokumrolle-weiss"
+},
+{
+  "id": "lokumrolle-kokos",
+  "name": "Lokumrolle Weiß mit Kokos & Pistazien",
+  "category": "Süßigkeiten",
+  "price": 2499,
+  "price_min": 1299,
+  "price_max": 2499,
+  "currency": "EUR",
+  "images": [
+    "/images/lokumrolle-kokos-1.jpg",
+    "/images/lokumrolle-kokos-2.jpg",
+    "/images/lokumrolle-kokos-3.jpg",
+    "/images/lokumrolle-kokos-4.jpg"
+  ],
+  "description": "Feine weiße Lokumrolle mit weicher Nougatmasse, gefüllt mit Pistazien und umhüllt von einer zarten Schicht Kokosraspeln – cremig, süß und aromatisch.",
+  "details": [
+    "Zutaten: Zucker, Stärke, Wasser, Pistazien, Kokosraspeln, natürliche Aromen",
+    "Aufbewahrung: Bei 10–20 °C lagern. Mit Folie abdecken. Haltbar bis zu 1 Jahr."
+  ],
+  "stripe_product_id": "prod_TImyWa9vcwZ0QN",
+  "variants": [
+    {
+      "id": "lokumrolle-kokos-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBOM7Vrq9QN3jUZFxUaKEZ"
+    },
+    {
+      "id": "lokumrolle-kokos-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBOM7Vrq9QN3jUiOzyv8ZE"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "lokumrolle-kokos"
+},
+{
+  "id": "gemischtes-maamoul",
+  "name": "Gemischtes Maamoul",
+  "category": "Süßigkeiten",
+  "price": 2199,
+  "price_min": 1099,
+  "price_max": 2199,
+  "currency": "EUR",
+  "images": [
+    "/images/gemischtes-maamoul-1.jpg",
+    "/images/gemischtes-maamoul-2.jpg"
+
+  ],
+  "description": "Feines gemischtes Maamoul in verschiedenen Sorten – mit Pistazien, Datteln oder Walnüssen gefüllt. Aromatisch, süß und perfekt zu Tee oder Kaffee.",
+  "details": [
+    "Zutaten: Mehl, tierische Butter (Smen), Dattelpaste, Pistazien, Walnüsse, Mahleb, Zucker",
+    "Aufbewahrung: Bei 10–20 °C lagern. Luftdicht aufbewahren oder abdecken. Haltbar bis zu 1 Monat."
+  ],
+  "stripe_product_id": "prod_TIn0h7W1pGFuUw",
+  "variants": [
+    {
+      "id": "gemischtes-maamoul-500g",
+      "label": "500 g",
+      "price": 1099,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBQo7Vrq9QN3jUA4RLuzAa"
+    },
+    {
+      "id": "gemischtes-maamoul-1kg",
+      "label": "1 kg",
+      "price": 2199,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBQo7Vrq9QN3jUXZnfCHxh"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "gemischtes-maamoul"
+},
+{
+  "id": "nussmix-geraeuchert",
+  "name": "Geräucherte Nussmischung",
+  "category": "Snacks",
+  "price": 1699,
+  "price_min": 899,
+  "price_max": 1699,
+  "currency": "EUR",
+  "images": [
+    "/images/nussmix-geraeuchert-1.jpg",
+    "/images/nussmix-geraeuchert-2.jpg",
+    "/images/nussmix-geraeuchert-3.jpg"
+  ],
+  "description": "Leckere geräucherte Nussmischung – Cashew, Mandeln und mehr – knusprig, würzig und voller Aroma. Perfekt zum Snacken oder als Beilage.",
+  "details": [
+    "Zutaten: Cashewkerne, Mandeln, Erdnüsse, pflanzliches Öl, Gewürze, Rauchsalz",
+    "Aufbewahrung: Bei 10–20 °C lagern. In luftdichter Verpackung aufbewahren. Haltbar bis zu 6 Monate."
+  ],
+  "stripe_product_id": "prod_TIn3a8U1LaxAa6",
+  "variants": [
+    {
+      "id": "nussmix-geraeuchert-500g",
+      "label": "500 g",
+      "price": 899,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBT17Vrq9QN3jULnlA4Y43"
+    },
+    {
+      "id": "nussmix-geraeuchert-1kg",
+      "label": "1 kg",
+      "price": 1699,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBT17Vrq9QN3jUM1vwccvv"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "nussmix-geraeuchert"
+},
+{
+  "id": "sauer-nuss-mischung",
+  "name": "Saure Nussmischung",
+  "category": "Snacks",
+  "price": 1699,
+  "price_min": 899,
+  "price_max": 1699,
+  "currency": "EUR",
+  "images": [
+    "/images/sauer-nuss-mischung-1.jpg",
+    "/images/sauer-nuss-mischung-2.jpg",
+    "/images/sauer-nuss-mischung-3.jpg"
+  ],
+  "description": "Leckere saure Nussmischung – Mandeln, Cashew, Pistazien, geröstet und leicht gesalzen, mit feiner säuerlicher Würzung. Perfekt als Snack für zwischendurch.",
+  "details": [
+    "Zutaten: Mandeln, Cashewkerne, Pistazien, Erdnüsse, pflanzliches Öl, Salz, Säuerungsmittel",
+    "Aufbewahrung: Bei 10–20 °C lagern. In luftdichter Verpackung aufbewahren. Haltbar bis zu 6 Monate."
+  ],
+  "stripe_product_id": "prod_TIn9oNGbAStNAc",
+  "variants": [
+    {
+      "id": "sauer-nuss-mischung-500g",
+      "label": "500 g",
+      "price": 899,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBZC7Vrq9QN3jUGwLoKCbs"
+    },
+    {
+      "id": "sauer-nuss-mischung-1kg",
+      "label": "1 kg",
+      "price": 1699,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBZC7Vrq9QN3jU8yRnwKlm"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.7,
+  "seo": "sauer-nuss-mischung"
+},
+{
+  "id": "salzige-nuss-mischung",
+  "name": "Salzige Nussmischung",
+  "category": "Snacks",
+  "price": 1699,
+  "price_min": 899,
+  "price_max": 1699,
+  "currency": "EUR",
+  "images": [
+    "/images/salzige-nuss-mischung-1.jpg",
+    "/images/salzige-nuss-mischung-2.jpg",
+    "/images/salzige-nuss-mischung-3.jpg"
+  ],
+  "description": "Leckere salzige Nussmischung – geröstet und gesalzen. Perfekt als Snack für unterwegs oder zu Hause. Enthält Mandeln, Cashew, Pistazien und mehr.",
+  "details": [
+    "Zutaten: Mandeln, Cashewkerne, Pistazien, Erdnüsse, pflanzliches Öl, Salz",
+    "Aufbewahrung: Bei 10–20 °C lagern. In luftdichter Verpackung aufbewahren. Haltbar bis zu 6 Monate."
+  ],
+  "stripe_product_id": "prod_TInCXWtwdkNrDO",
+  "variants": [
+    {
+      "id": "salzige-nuss-mischung-500g",
+      "label": "500 g",
+      "price": 899,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBcB7Vrq9QN3jUqgawJLMF"
+    },
+    {
+      "id": "salzige-nuss-mischung-1kg",
+      "label": "1 kg",
+      "price": 1699,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBcB7Vrq9QN3jUT24G28ig"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.6,
+  "seo": "salzige-nuss-mischung"
+},
+{
+  "id": "wassermelonenkerne-rot",
+  "name": "Geröstete rote Wassermelonenkerne",
+  "category": "Snacks",
+  "price": 999,
+  "price_min": 499,
+  "price_max": 999,
+  "currency": "EUR",
+  "images": [
+    "/images/wassermelonenkerne-rot-1.jpg",
+    "/images/wassermelonenkerne-rot-2.jpg",
+    "/images/wassermelonenkerne-rot-3.jpg"
+  ],
+  "description": "Leckere geröstete rote Wassermelonenkerne – leicht gesalzen, knackig und perfekt zum Snacken.",
+  "details": [
+    "Zutaten: Wassermelonenkerne, Salz",
+    "Aufbewahrung: Kühl und trocken bei 10–20 °C lagern. In luftdichter Verpackung aufbewahren. Haltbar bis zu 6 Monate."
+  ],
+  "stripe_product_id": "prod_TInE84ddiCdMUy",
+  "variants": [
+    {
+      "id": "wassermelonenkerne-rot-500g",
+      "label": "500 g",
+      "price": 499,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBdp7Vrq9QN3jUfWTGowE4"
+    },
+    {
+      "id": "wassermelonenkerne-rot-1kg",
+      "label": "1 kg",
+      "price": 999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBdp7Vrq9QN3jUHuhqjQ3L"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.6,
+  "seo": "wassermelonenkerne-rot"
+},
+{
+  "id": "kuerbiskerne-weiss",
+  "name": "Weiße Kürbiskerne",
+  "category": "Snacks",
+  "price": 999,
+  "price_min": 499,
+  "price_max": 999,
+  "currency": "EUR",
+  "images": [
+    "/images/kuerbiskerne-weiss-1.jpg",
+    "/images/kuerbiskerne-weiss-2.jpg",
+    "/images/kuerbiskerne-weiss-3.jpg"
+  ],
+  "description": "Leckere weiße Kürbiskerne – leicht geröstet und gesalzen. Der perfekte Snack für zwischendurch.",
+  "details": [
+    "Zutaten: Kürbiskerne, Salz",
+    "Aufbewahrung: Kühl und trocken bei 10–20 °C lagern. In luftdichter Verpackung aufbewahren. Haltbar bis zu 6 Monate."
+  ],
+  "stripe_product_id": "prod_TInGuRSgKCmG56",
+  "variants": [
+    {
+      "id": "kuerbiskerne-weiss-500g",
+      "label": "500 g",
+      "price": 499,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBfV7Vrq9QN3jUlHasTqqE"
+    },
+    {
+      "id": "kuerbiskerne-weiss-1kg",
+      "label": "1 kg",
+      "price": 999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBfV7Vrq9QN3jU65Aeg3py"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.7,
+  "seo": "kuerbiskerne-weiss"
+},
+{
+  "id": "kuerbiskerne-gelb",
+  "name": "Gelbe Kürbiskerne",
+  "category": "Snacks",
+  "price": 999,
+  "price_min": 499,
+  "price_max": 999,
+  "currency": "EUR",
+  "images": [
+    "/images/kuerbiskerne-gelb-1.jpg",
+    "/images/kuerbiskerne-gelb-2.jpg",
+    "/images/kuerbiskerne-gelb-3.jpg"
+  ],
+  "description": "Leckere gelbe Kürbiskerne – knusprig geröstet und leicht gesalzen. Ideal als Snack für zwischendurch oder zum Knabbern bei gemütlichen Runden.",
+  "details": [
+    "Zutaten: Kürbiskerne, Salz",
+    "Aufbewahrung: Kühl und trocken bei 10–20 °C lagern. In luftdichter Verpackung aufbewahren. Haltbar bis zu 6 Monate."
+  ],
+  "stripe_product_id": "prod_TInJJvKoEB9ahL",
+  "variants": [
+    {
+      "id": "kuerbiskerne-gelb-500g",
+      "label": "500 g",
+      "price": 499,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBjB7Vrq9QN3jUMB5YlwfS"
+    },
+    {
+      "id": "kuerbiskerne-gelb-1kg",
+      "label": "1 kg",
+      "price": 999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBjB7Vrq9QN3jUEq0Dg0AE"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.6,
+  "seo": "kuerbiskerne-gelb"
+},
+{
+  "id": "fruchtchips-mix",
+  "name": "Fruchtchips Mix",
+  "category": "Snacks & Süßes",
+  "price": 4999,
+  "price_min": 499,
+  "price_max": 4999,
+  "currency": "EUR",
+  "images": [
+    "/images/fruchtchips-mix-1.jpg",
+    "/images/fruchtchips-mix-2.jpg",
+    "/images/fruchtchips-mix-3.jpg"
+  ],
+  "description": "Knuspriger Fruchtchips-Mix – natürlich süß, fruchtig und schonend gefriergetrocknet. Perfekt als Snack für zwischendurch.",
+  "details": [
+    "Zutaten: Erdbeeren, Bananen, Apfel, Kiwi, Mango, Ananas, Rote Beete, keine Zusatzstoffe",
+    "Aufbewahrung: Kühl, trocken und luftdicht lagern. Haltbar bis zu 12 Monate."
+  ],
+  "stripe_product_id": "prod_TInW8qZTgjVKKP",
+  "variants": [
+    {
+      "id": "fruchtchips-mix-100g",
+      "label": "100 g",
+      "price": 499,
+      "weight": 100,
+      "stripe_price_id": "price_1SMBvQ7Vrq9QN3jU5vkZ4UVq"
+    },
+    {
+      "id": "fruchtchips-mix-200g",
+      "label": "200 g",
+      "price": 999,
+      "weight": 200,
+      "stripe_price_id": "price_1SMBvQ7Vrq9QN3jUU0vlcllN"
+    },
+    {
+      "id": "fruchtchips-mix-1kg",
+      "label": "1 kg",
+      "price": 4999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBvQ7Vrq9QN3jUdkJD30fg"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "fruchtchips-mix"
+},
+{
+  "id": "asia-snack-mix",
+  "name": "Asia Snack Mix",
+  "category": "Snacks & Salziges",
+  "price": 1199,
+  "price_min": 599,
+  "price_max": 1199,
+  "currency": "EUR",
+  "images": [
+    "/images/asia-snack-mix-1.jpg",
+    "/images/asia-snack-mix-2.jpg",
+    "/images/asia-snack-mix-3.jpg"
+  ],
+  "description": "Würziger Asia Snack Mix mit knusprigen Reiscrackern, Erdnüssen und Wasabi-Snacks – der perfekte Mix für alle, die es herzhaft mögen.",
+  "details": [
+    "Zutaten: Reiscracker, Erdnüsse, Gewürze, Wasabiüberzug, Salz",
+    "Aufbewahrung: Kühl, trocken und lichtgeschützt lagern."
+  ],
+  "stripe_product_id": "prod_TInYzgsmcE7Zq4",
+  "variants": [
+    {
+      "id": "asia-snack-mix-500g",
+      "label": "500 g",
+      "price": 599,
+      "weight": 500,
+      "stripe_price_id": "price_1SMBxS7Vrq9QN3jUbEoRvzCZ"
+    },
+    {
+      "id": "asia-snack-mix-1kg",
+      "label": "1 kg",
+      "price": 1199,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMBxS7Vrq9QN3jU8tutCZ7n"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.7,
+  "seo": "asia-snack-mix"
+},
+{
+  "id": "knusper-mix-bunt",
+  "name": "Knusper Mix Bunt",
+  "category": "Snacks & Salziges",
+  "price": 999,
+  "price_min": 499,
+  "price_max": 999,
+  "currency": "EUR",
+  "images": [
+    "/images/knusper-mix-bunt-1.jpg",
+    "/images/knusper-mix-bunt-2.jpg",
+    "/images/knusper-mix-bunt-3.jpg"
+  ],
+  "description": "Bunter, knuspriger Snack-Mix mit verschiedenen Formen und Farben – ideal für zwischendurch oder zum Teilen.",
+  "details": [
+    "Zutaten: Reiscracker, Gewürze, Salz, Farbstoffe",
+    "Aufbewahrung: Trocken und kühl lagern."
+  ],
+  "stripe_product_id": "prod_TInZFmeoyrqP7k",
+  "variants": [
+    {
+      "id": "knusper-mix-bunt-500g",
+      "label": "500 g",
+      "price": 499,
+      "weight": 500,
+      "stripe_price_id": "price_1SMByn7Vrq9QN3jUHQ1qWt7P"
+    },
+    {
+      "id": "knusper-mix-bunt-1kg",
+      "label": "1 kg",
+      "price": 999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMByn7Vrq9QN3jUKgtWQNm9"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.5,
+  "seo": "knusper-mix-bunt"
+},
+{
+  "id": "bunter-snack-mix",
+  "name": "Bunter Snack-Mix",
+  "category": "Snacks & Salziges",
+  "price": 1199,
+  "price_min": 599,
+  "price_max": 1199,
+  "currency": "EUR",
+  "images": [
+    "/images/bunter-snack-mix-1.jpg",
+    "/images/bunter-snack-mix-2.jpg",
+    "/images/bunter-snack-mix-3.jpg"
+  ],
+  "description": "Ein bunter Mix aus verschiedenen gerösteten und gewürzten Nüssen und Snacks – würzig, knackig und perfekt zum Snacken.",
+  "details": [
+    "Zutaten: Erdnüsse, Mandeln, Mais, Reiscracker, Gewürze, Farbstoffe",
+    "Aufbewahrung: Kühl und trocken lagern. Vor direkter Sonneneinstrahlung schützen."
+  ],
+  "stripe_product_id": "prod_TIneSfiYfGJC5I",
+  "variants": [
+    {
+      "id": "bunter-snack-mix-500g",
+      "label": "500 g",
+      "price": 599,
+      "weight": 500,
+      "stripe_price_id": "price_1SMC3Z7Vrq9QN3jU3N9zTJud"
+    },
+    {
+      "id": "bunter-snack-mix-1kg",
+      "label": "1 kg",
+      "price": 1199,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMC3Z7Vrq9QN3jU7fsy9I6L"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.7,
+  "seo": "bunter-snack-mix"
+},
+{
+  "id": "salziger-nuss-mix",
+  "name": "Salziger Nuss-Mix",
+  "category": "Snacks & Salziges",
+  "price": 1399,
+  "price_min": 699,
+  "price_max": 1399,
+  "currency": "EUR",
+  "images": [
+    "/images/salziger-nuss-mix-1.jpg",
+    "/images/salziger-nuss-mix-2.jpg",
+    "/images/salziger-nuss-mix-3.jpg"
+  ],
+  "description": "Knackige, geröstete Nüsse mit leichtem Salzüberzug – ideal zum Snacken oder als Beilage.",
+  "details": [
+    "Zutaten: Sonnenblumenkerne, Mandeln, Erdnüsse, Pistazien, Salz",
+    "Aufbewahrung: Trocken und kühl lagern. Vor direkter Sonneneinstrahlung schützen."
+  ],
+  "stripe_product_id": "prod_TIngaDJscf2DnT",
+  "variants": [
+    {
+      "id": "salziger-nuss-mix-500g",
+      "label": "500 g",
+      "price": 699,
+      "weight": 500,
+      "stripe_price_id": "price_1SMC4z7Vrq9QN3jU1mOJh8oj"
+    },
+    {
+      "id": "salziger-nuss-mix-1kg",
+      "label": "1 kg",
+      "price": 1399,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMC4z7Vrq9QN3jUcalIem1V"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.5,
+  "seo": "salziger-nuss-mix"
+},
+{
+  "id": "gesalzene-mandeln",
+  "name": "Gesalzene Mandeln",
+  "category": "Snacks & Salziges",
+  "price": 1699,
+  "price_min": 899,
+  "price_max": 1699,
+  "currency": "EUR",
+  "images": [
+    "/images/gesalzene-mandeln-1.jpg",
+    "/images/gesalzene-mandeln-2.jpg",
+    "/images/gesalzene-mandeln-3.jpg",
+    "/images/gesalzene-mandeln-4.jpg"
+  ],
+  "description": "Knusprige, geröstete Mandeln mit feiner Salzkruste – ein herzhafter Snackklassiker.",
+  "details": [
+    "Zutaten: Mandeln, Salz",
+    "Aufbewahrung: Kühl und trocken lagern, vor Sonnenlicht schützen."
+  ],
+  "stripe_product_id": "prod_TInhMgcJl1dgAL",
+  "variants": [
+    {
+      "id": "gesalzene-mandeln-500g",
+      "label": "500 g",
+      "price": 899,
+      "weight": 500,
+      "stripe_price_id": "price_1SMC6L7Vrq9QN3jUUMPLDKk9"
+    },
+    {
+      "id": "gesalzene-mandeln-1kg",
+      "label": "1 kg",
+      "price": 1699,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMC6L7Vrq9QN3jUG0jMLA57"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "gesalzene-mandeln"
+},
+{
+  "id": "wassermelonenkerne-geroestet",
+  "name": "Wassermelonenkerne geröstet",
+  "category": "Snacks & Kerne",
+  "price": 999,
+  "price_min": 499,
+  "price_max": 999,
+  "currency": "EUR",
+  "images": [
+    "/images/wassermelonenkerne-geroestet-1.jpg",
+    "/images/wassermelonenkerne-geroestet-2.jpg",
+    "/images/wassermelonenkerne-geroestet-3.jpg"
+  ],
+  "description": "Geröstete Wassermelonenkerne mit kräftigem Biss und leicht nussigem Aroma – perfekt zum Knabbern.",
+  "details": [
+    "Zutaten: Wassermelonenkerne, Salz",
+    "Aufbewahrung: Kühl und trocken lagern, vor direkter Sonne schützen."
+  ],
+  "stripe_product_id": "prod_TInjl3yJMC79zb",
+  "variants": [
+    {
+      "id": "wassermelonenkerne-500g",
+      "label": "500 g",
+      "price": 499,
+      "weight": 500,
+      "stripe_price_id": "price_1SMC7f7Vrq9QN3jUa9lqEch3"
+    },
+    {
+      "id": "wassermelonenkerne-1kg",
+      "label": "1 kg",
+      "price": 999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMC7f7Vrq9QN3jUjNHYdvw1"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.6,
+  "seo": "wassermelonenkerne-geroestet"
+},
+{
+  "id": "mandeln-geroestet-schale",
+  "name": "Mandeln geröstet in Schale",
+  "category": "Snacks & Kerne",
+  "price": 1199,
+  "price_min": 599,
+  "price_max": 1199,
+  "currency": "EUR",
+  "images": [
+    "/images/mandeln-geroestet-schale-1.jpg",
+    "/images/mandeln-geroestet-schale-2.jpg",
+    "/images/mandeln-geroestet-schale-3.jpg"
+  ],
+  "description": "Knusprige Mandeln in Schale – geröstet und leicht gesalzen. Perfekter Snack für Zwischendurch.",
+  "details": [
+    "Zutaten: Mandeln, Salz",
+    "Aufbewahrung: Kühl und trocken lagern. Vor direkter Sonne schützen."
+  ],
+  "stripe_product_id": "prod_TInkW0oG2PcRRW",
+  "variants": [
+    {
+      "id": "mandeln-geroestet-schale-500g",
+      "label": "500 g",
+      "price": 599,
+      "weight": 500,
+      "stripe_price_id": "price_1SMC8p7Vrq9QN3jUw05if8g5"
+    },
+    {
+      "id": "mandeln-geroestet-schale-1kg",
+      "label": "1 kg",
+      "price": 1199,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMC8p7Vrq9QN3jUmE6FD1D8"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.7,
+  "seo": "mandeln-geroestet-schale"
+},
+{
+  "id": "qbqab-ghawar",
+  "name": "Qbqab Ghawar",
+  "category": "Süßwaren",
+  "price": 1199,
+  "price_min": 599,
+  "price_max": 1199,
+  "currency": "EUR",
+  "images": [
+    "/images/qbqab-ghawar-1.jpg",
+    "/images/qbqab-ghawar-2.jpg",
+    "/images/qbqab-ghawar-3.jpg"
+  ],
+  "description": "Bunte, weiche Qbqab Ghawar in Pastellfarben – süß im Geschmack, weich im Biss und bei Groß und Klein beliebt.",
+  "details": [
+    "Zutaten: Zucker, Glukosesirup, Gelatine, Farbstoffe, Aromen",
+    "Aufbewahrung: Kühl und trocken lagern"
+  ],
+  "stripe_product_id": "prod_TInlx8OZXn267F",
+  "variants": [
+    {
+      "id": "qbqab-ghawar-500g",
+      "label": "500 g",
+      "price": 599,
+      "weight": 500,
+      "stripe_price_id": "price_1SMCAH7Vrq9QN3jUgDRQBbqn"
+    },
+    {
+      "id": "qbqab-ghawar-1kg",
+      "label": "1 kg",
+      "price": 1199,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMCAH7Vrq9QN3jUJcBfkxaf"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.5,
+  "seo": "qbqab-ghawar"
+},
+{
+  "id": "geroestete-erdnuesse",
+  "name": "Geröstete Erdnüsse",
+  "category": "Nüsse",
+  "price": 999,
+  "price_min": 499,
+  "price_max": 999,
+  "currency": "EUR",
+  "images": [
+    "/images/geroestete-erdnuesse-1.jpg",
+    "/images/geroestete-erdnuesse-2.jpg",
+    "/images/geroestete-erdnuesse-3.jpg"
+  ],
+  "description": "Knackige, goldgelb geröstete Erdnüsse – perfekt zum Snacken oder als Topping.",
+  "details": [
+    "Zutaten: Erdnüsse, Pflanzenöl, Salz",
+    "Aufbewahrung: Kühl, trocken und lichtgeschützt lagern"
+  ],
+  "stripe_product_id": "prod_TInoF3Z0i9lb7x",
+  "variants": [
+    {
+      "id": "geroestete-erdnuesse-500g",
+      "label": "500 g",
+      "price": 499,
+      "weight": 500,
+      "stripe_price_id": "price_1SMCCX7Vrq9QN3jUad5sF0hB"
+    },
+    {
+      "id": "geroestete-erdnuesse-1kg",
+      "label": "1 kg",
+      "price": 999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMCCX7Vrq9QN3jUbIBi10vl"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.3,
+  "seo": "geroestete-erdnuesse"
+},
+{
+  "id": "dattelriegel-pistazie",
+  "name": "Dattelriegel mit Pistazien",
+  "category": "Süßigkeiten",
+  "price": 2499,
+  "price_min": 1299,
+  "price_max": 2499,
+  "currency": "EUR",
+  "images": [
+    "/images/dattelriegel-pistazie-1.jpg",
+    "/images/dattelriegel-pistazie-2.jpg"
+  ],
+  "description": "Feine Dattelriegel, handgefertigt und reichlich belegt mit Pistazien – natürlich süß und voller Energie.",
+  "details": [
+    "Zutaten: Datteln, Pistazien, Pflanzenöl",
+    "Ohne Zuckerzusatz",
+    "Aufbewahrung: Trocken und kühl lagern, luftdicht verpackt"
+  ],
+  "stripe_product_id": "prod_TInqHgxlUk60Yv",
+  "variants": [
+    {
+      "id": "dattelriegel-pistazie-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SMCEw7Vrq9QN3jUStvdjW4T"
+    },
+    {
+      "id": "dattelriegel-pistazie-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMCEw7Vrq9QN3jUIQSAaiK8"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "dattelriegel-pistazie"
+},
+{
+  "id": "halwa-rolle-pistazie",
+  "name": "Halwa-Rollen mit Pistazien & Cranberries",
+  "category": "Süßigkeiten",
+  "price": 2199,
+  "currency": "EUR",
+  "images": [
+    "/images/halwa-rolle-pistazie-1.jpg",
+    "/images/halwa-rolle-pistazie-2.jpg"
+  ],
+  "description": "Feine weiße Halwa-Rollen, gefüllt mit Pistazien und Cranberries. Orientalische Süßigkeit mit zarter Textur.",
+  "details": [
+    "Zutaten: Zucker, Stärke, Pistazien, Cranberries, Pflanzenöl",
+    "Kühl und trocken lagern",
+    "Haltbar bis zu 12 Monate"
+  ],
+  "stripe_product_id": "prod_TInsUarqGXr7Wn",
+  "variants": [
+    {
+      "id": "halwa-rolle-pistazie-500g",
+      "label": "500 g",
+      "price": 1099,
+      "weight": 500,
+      "stripe_price_id": "price_1SMCGo7Vrq9QN3jUPujoTl32"
+    },
+    {
+      "id": "halwa-rolle-pistazie-1kg",
+      "label": "1 kg",
+      "price": 2199,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMCGo7Vrq9QN3jUPJB9kCYa"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.6,
+  "seo": "halwa-rolle-pistazie"
+},
+{
+  "id": "pistazien-honig-riegel",
+  "name": "Pistazien-Honig-Riegel",
+  "category": "Süßigkeiten",
+  "price": 2499,
+  "currency": "EUR",
+  "images": [
+    "/images/pistazien-honig-riegel-1.jpg",
+    "/images/pistazien-honig-riegel-2.jpg",
+    "/images/pistazien-honig-riegel-3.jpg"
+  ],
+  "description": "Traditioneller Riegel aus Pistazien, Honig und Datteln – natürlich süß, handgemacht und reich an Energie.",
+  "details": [
+    "Zutaten: Pistazien, Honig, Datteln, Zucker",
+    "Ohne künstliche Zusätze",
+    "Kühl und trocken lagern"
+  ],
+  "stripe_product_id": "prod_TInu9La9t31tug",
+  "variants": [
+    {
+      "id": "pistazien-honig-riegel-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SMCJ87Vrq9QN3jUGUfQFYik"
+    },
+    {
+      "id": "pistazien-honig-riegel-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMCJ87Vrq9QN3jUpA4nflWw"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.7,
+  "seo": "pistazien-honig-riegel"
+},
+{
+  "id": "halawa-rollen-klassisch",
+  "name": "Halawa Rollen Klassisch",
+  "category": "Süßigkeiten",
+  "price": 1999,
+  "currency": "EUR",
+  "images": [
+    "/images/halawa-rollen-klassisch-1.jpg",
+    "/images/halawa-rollen-klassisch-2.jpg"
+  ],
+  "description": "Feine Halawa-Rollen aus Sesampaste – purer Geschmack, ohne Topping. Klassisch, cremig und aromatisch.",
+  "details": [
+    "Zutaten: Sesampaste (Tahini), Zucker, Pflanzenöl, natürliche Aromen",
+    "Kühl und trocken lagern. Haltbar bis zu 12 Monate"
+  ],
+  "stripe_product_id": "prod_TIpMFqLZrsEnHf",
+  "variants": [
+    {
+      "id": "halawa-rollen-klassisch-500g",
+      "label": "500 g",
+      "price": 999,
+      "weight": 500,
+      "stripe_price_id": "price_1SMDhp7Vrq9QN3jUrxWyfops"
+    },
+    {
+      "id": "halawa-rollen-klassisch-1kg",
+      "label": "1 kg",
+      "price": 1999,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMDhp7Vrq9QN3jUZLC36qCR"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "halawa-rollen-klassisch"
+},
+{
+  "id": "luxus-pralinen",
+  "name": "Luxus-Pralinen (verschiedene Sorten)",
+  "category": "Süßigkeiten",
+  "price": 1299,
+  "currency": "EUR",
+  "images": [
+    "/images/luxus-pralinen-1.jpg",
+    "/images/luxus-pralinen-2.jpg",
+    "/images/luxus-pralinen-3.jpg",
+    "/images/luxus-pralinen-4.jpg",
+    "/images/luxus-pralinen-5.jpg",
+    "/images/luxus-pralinen-6.jpg"
+  ],
+  "description": "Feinste, handgefertigte Pralinen mit Karamell, Nüssen, Schokolade und mehr – perfekt zum Verschenken oder selbst genießen.",
+  "details": [
+    "Sorten: Karamell, Haselnuss, Frucht, Schokolade (farblich sortiert)",
+    "Ohne künstliche Farbstoffe",
+    "Enthält Nüsse, Milch, Soja",
+    "Kühl und trocken lagern"
+  ],
+  "stripe_product_id": "prod_TIpNWSAYtcawht",
+  "variants": [
+    {
+      "id": "luxus-pralinen-500g",
+      "label": "500 g",
+      "price": 1299,
+      "weight": 500,
+      "stripe_price_id": "price_1SMDjC7Vrq9QN3jUHj3yF1v5"
+    },
+    {
+      "id": "luxus-pralinen-1kg",
+      "label": "1 kg",
+      "price": 2499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMDjC7Vrq9QN3jUYj2jtj3M"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "luxus-pralinen"
+},
+{
+  "id": "arabisches-eis-mit-pistazien",
+  "name": "Arabisches Eis mit Pistazien",
+  "category": "Süßigkeiten",
+  "price": 2199,
+  "price_min": 2199,
+  "price_max": 2199,
+  "currency": "EUR",
+  "pickup_only": true,
+  "images": [
+    "/images/arabisches-eis-mit-pistazien-1.jpg",
+    "/images/arabisches-eis-mit-pistazien-2.jpg",
+    "/images/arabisches-eis-mit-pistazien-3.jpg",
+    "/images/arabisches-eis-mit-pistazien-4.jpg",
+    "/images/arabisches-eis-mit-pistazien-5.jpg"
+  ],
+  "description": "Traditionelles arabisches Eis (بوظة عربية) mit einer knusprigen Pistazienschicht – weich, zäh, cremig und angenehm süß. Handgerollt und ein echter Klassiker im Nahen Osten.",
+  "details": [
+    "Zutaten: Milch, Zucker, Sahne, Mastix, Sahlab, Pistazien",
+    "Kühl lagern – nicht einfrieren",
+    "Ein Stück wie abgebildet",
+    "Ohne künstliche Zusätze"
+  ],
+  "stripe_product_id": "prod_TIpPO3oOReoieB",
+  "variants": [
+    {
+      "id": "arabisches-eis-mit-pistazien-stk",
+      "label": "1 Stück",
+      "price": 2199,
+      "weight": 0,
+      "stripe_price_id": "price_1SMDkz7Vrq9QN3jUEJpwiecA"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "arabisches-eis-mit-pistazien"
+},
+{
+  "id": "arabisches-eis-portion",
+  "name": "Arabisches Eis – Portion",
+  "category": "Süßigkeiten",
+  "price": 399,
+  "price_min": 399,
+  "price_max": 399,
+  "currency": "EUR",
+  "pickup_only": true,
+  "images": [
+    "/images/arabisches-eis-stueck-1.jpg",
+    "/images/arabisches-eis-stueck-2.jpg",
+    "/images/arabisches-eis-stueck-3.jpg",
+    "/images/arabisches-eis-stueck-4.jpg"
+  ],
+  "description": "Eine Portion traditionelles arabisches Eis (بوظة عربية) in einem Dessertglas – weich, cremig, zart gesüßt und mit Pistazien verfeinert. Ideal zum Genießen im Store oder zum Mitnehmen.",
+  "stripe_product_id": "prod_TIpRtPyUrHr7ps",
+  "variants": [
+    {
+      "id": "arabisches-eis-portion-1",
+      "label": "1 Portion",
+      "price": 399,
+      "weight": 0,
+      "stripe_price_id": "price_1SMDmJ7Vrq9QN3jUdHo5jZKm"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "arabisches-eis-portion"
+},
+{
+  "id": "ras-alabid",
+  "name": "Ras Alabid",
+  "category": "Süßigkeiten",
+  "price": 250,
+  "currency": "EUR",
+  "images": [
+    "/images/ras-alabid-1.jpg",
+    "/images/ras-alabid-2.jpg",
+    "/images/ras-alabid-3.jpg",
+    "/images/ras-alabid-4.jpg"
+  ],
+  "description": "Ein traditioneller Leckerbissen: Schokoladig, cremig und mit einem Hauch Pistazie verfeinert. Perfekt als kleine Belohnung.",
+  "details": [
+    "Pro Stück",
+    "Mit Schokolade überzogen",
+    "Gefüllt & verziert mit Pistazien",
+    "Kühl lagern"
+  ],
+  "stripe_product_id": "prod_TIqqBcmTEsBZwE",
+  "variants": [
+    {
+      "id": "ras-alabid-stk",
+      "label": "1 Stück",
+      "price": 250,
+      "weight": 0,
+      "stripe_price_id": "price_1SMF927Vrq9QN3jUUF8kQr2J"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.6,
+  "seo": "ras-alabid"
+},
+{
+  "id": "suessigkeiten-mix-box",
+  "name": "Süßigkeiten Mix Box",
+  "category": "Süßigkeiten",
+  "price": 1099,
+  "price_min": 1099,
+  "price_max": 2199,
+  "currency": "EUR",
+  "images": [
+    "/images/suessigkeiten-mix-box-1.jpg",
+    "/images/suessigkeiten-mix-box-2.jpg",
+    "/images/suessigkeiten-mix-box-3.jpg",
+    "/images/suessigkeiten-mix-box-4.jpg",
+    "/images/suessigkeiten-mix-box-5.jpg"
+  ],
+  "description": "Eine bunte Mischung aus orientalischen Süßigkeiten – perfekt zum Probieren oder Verschenken. Enthält u. a. Halwa-Rollen, Nussriegel, Dattelkugeln und Pistazienkonfekt.",
+  "details": [
+    "Zutaten: Pistazien, Mandeln, Datteln, Honig, Zucker, Halwa uvm.",
+    "Ideal als Geschenk oder für Gäste",
+    "Kühl & trocken lagern",
+    "Ohne künstliche Zusätze"
+  ],
+  "variants": [
+    {
+      "id": "suessigkeiten-mix-box-500g",
+      "label": "500 g",
+      "price": 1099,
+      "weight": 500,
+      "stripe_price_id": "price_1SMFAJ7Vrq9QN3jUmkYXy8D6"
+    },
+    {
+      "id": "suessigkeiten-mix-box-1kg",
+      "label": "1 kg",
+      "price": 2199,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMFAJ7Vrq9QN3jU6PQKFaSf"
+    }
+  ],
+  "stripe_product_id": "prod_TIqsqS3DJzkpbp",
+  "available": true,
+  "ratingAvg": 4.9,
+  "seo": "suessigkeiten-mix-box"
+},
+{
+  "id": "pistazien-gruen-gemahlen",
+  "name": "Pistazien – Grün gemahlen",
+  "category": "Nüsse & Kerne",
+  "price": 899,
+  "price_min": 899,
+  "price_max": 4499,
+  "currency": "EUR",
+  "description": "Fein gemahlene, leuchtend grüne Pistazien – ideal zum Backen, für Desserts und als Topping. Frisch, aromatisch und 100 % naturbelassen. Ohne Zusätze.",
+  "images": [
+    "/images/pistazien-gruen-gemahlen-1.jpg",
+    "/images/pistazien-gruen-gemahlen-2.jpg"
+  ],
+  "stripe_product_id": "prod_TIqgwbsDmUtMe4U",
+  "variants": [
+    {
+      "id": "pistazien-gruen-gemahlen-200g",
+      "label": "200 g",
+      "price": 899,
+      "weight": 200,
+      "stripe_price_id": "price_1SMEzH7Vrq9QN3jULPiaw0nQ"
+    },
+    {
+      "id": "pistazien-gruen-gemahlen-500g",
+      "label": "500 g",
+      "price": 2299,
+      "weight": 500,
+      "stripe_price_id": "price_1SMEzH7Vrq9QN3jUcKngV8hz"
+    },
+    {
+      "id": "pistazien-gruen-gemahlen-1kg",
+      "label": "1 kg",
+      "price": 4499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMEzt7Vrq9QN3jUHUtelXK7"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "pistazien-gruen-gemahlen"
+},
+{
+  "id": "pistazien-dunkel-roh",
+  "name": "Pistazien – Dunkel & roh",
+  "category": "Nüsse & Kerne",
+  "price": 699,
+  "price_min": 699,
+  "price_max": 3499,
+  "currency": "EUR",
+  "description": "Intensiv aromatische, dunkle Pistazien – ungeröstet und naturbelassen. Perfekt zum Snacken oder für eigene Kreationen.",
+  "images": [
+    "/images/pistazien-dunkel-roh-1.jpg",
+    "/images/pistazien-dunkel-roh-2.jpg"
+  ],
+  "stripe_product_id": "prod_TIqjIJuLFCh4AD",
+  "variants": [
+    {
+      "id": "pistazien-dunkel-roh-200g",
+      "label": "200 g",
+      "price": 699,
+      "weight": 200,
+      "stripe_price_id": "price_1SMF2K7Vrq9QN3jUc9TElnMi"
+    },
+    {
+      "id": "pistazien-dunkel-roh-500g",
+      "label": "500 g",
+      "price": 1799,
+      "weight": 500,
+      "stripe_price_id": "price_1SMF2K7Vrq9QN3jUKKj1lAS8"
+    },
+    {
+      "id": "pistazien-dunkel-roh-1kg",
+      "label": "1 kg",
+      "price": 3499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMF2K7Vrq9QN3jUSY3uUiw0"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.7,
+  "seo": "pistazien-dunkel-roh"
+},
+{
+  "id": "pistazien-hell-roh",
+  "name": "Pistazien – Hell & roh",
+  "category": "Nüsse & Kerne",
+  "price": 899,
+  "price_min": 899,
+  "price_max": 4499,
+  "currency": "EUR",
+  "description": "Helle ungeröstete Pistazien – naturbelassen und mild im Geschmack. Perfekt als Snack oder für Backwaren und Desserts.",
+  "images": [
+    "/images/pistazien-hell-roh-1.jpg",
+    "/images/pistazien-hell-roh-2.jpg"
+  ],
+  "stripe_product_id": "prod_TIqmSfVbRIfVdJ",
+  "variants": [
+    {
+      "id": "pistazien-hell-roh-200g",
+      "label": "200 g",
+      "price": 899,
+      "weight": 200,
+      "stripe_price_id": "price_1SMF4l7Vrq9QN3jUEJlV1X4m"
+    },
+    {
+      "id": "pistazien-hell-roh-500g",
+      "label": "500 g",
+      "price": 2299,
+      "weight": 500,
+      "stripe_price_id": "price_1SMF4l7Vrq9QN3jUALqjR0Og"
+    },
+    {
+      "id": "pistazien-hell-roh-1kg",
+      "label": "1 kg",
+      "price": 4499,
+      "weight": 1000,
+      "stripe_price_id": "price_1SMF4l7Vrq9QN3jUXVS8mQny"
+    }
+  ],
+  "available": true,
+  "ratingAvg": 4.8,
+  "seo": "pistazien-hell-roh"
+}
+
+
+]

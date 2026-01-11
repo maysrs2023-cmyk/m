@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alle Produkte – Mays</title>
+<script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="min-h-screen bg-pink-50">
+
+  <!-- Header -->
+  <div class="bg-white border-b border-gray-100">
+    <header class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-[auto,1fr,auto] items-center gap-4">
+      <div class="flex items-center gap-3">
+        <button id="menuBtn" class="p-2 rounded-xl border border-pink-200 hover:bg-pink-50" aria-label="Menü öffnen">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="4" y1="7" x2="20" y2="7"/>
+            <line x1="4" y1="12" x2="16" y2="12"/>
+            <line x1="4" y1="17" x2="13" y2="17"/>
+          </svg>
+        </button>
+        <a href="/index.html" class="flex items-center">
+          <img src="/images/mays.png" alt="Mays Logo" class="h-20 md:h-24 w-auto object-contain">
+        </a>
+      </div>
+      <form id="searchForm" role="search" class="justify-self-center w-full max-w-xl relative">
+        <input id="searchInput" type="search" placeholder="Produkte suchen …"
+               class="w-full rounded-xl border border-pink-200 bg-white pl-11 pr-4 py-2 outline-none focus:ring-2 focus:ring-pink-400 focus:border-pink-300">
+        <button class="absolute left-3 top-1/2 -translate-y-1/2 text-gray-600" type="submit" aria-label="Suchen">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </form>
+      <a href="/cart.html" class="justify-self-end relative p-2 rounded-full hover:bg-pink-50 border border-pink-200">
+        <svg class="h-6 w-6 text-gray-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M3 3h2l2.2 10.5a2 2 0 0 0 2 1.5h8.6a2 2 0 0 0 2-1.6l1.1-6.4H6.1"/>
+          <circle cx="9" cy="20" r="1.6"/><circle cx="18" cy="20" r="1.6"/>
+        </svg>
+        <span id="cartBadge" class="absolute -top-1 -right-1 text-[11px] bg-pink-500 text-white rounded-full px-1.5 py-0.5">0</span>
+      </a>
+    </header>
+  </div>
+
+<!-- Hauptbereich: Filter links + Produkte rechts -->
+<div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 md:grid-cols-[260px_1fr] gap-8">
+  
+  <!-- Linke Seite: Kategorien + Sortieren -->
+  <div class="filter-sidebar">
+    <div class="categories">
+      <button class="categories-toggle" id="catToggle">
+        Kategorien
+        <span class="arrow">▾</span>
+      </button>
+
+      <div class="categories-list" id="catList">
+        <button class="cat-btn" data-cat="alle">Alle Produkte</button>
+        <button class="cat-btn" data-cat="süßigkeiten">Süßigkeiten</button>
+        <button class="cat-btn" data-cat="salziges">Salziges</button>
+        <button class="cat-btn" data-cat="snacks">Snacks</button>
+        <button class="cat-btn" data-cat="nüsse & kerne">Nüsse & Kerne</button>
+        <button class="cat-btn" data-cat="harissa">Harissa</button>
+        <button class="cat-btn" data-cat="baklava">Baklava</button>
+      </div>
+    </div>
+
+    <div class="sortieren-box mt 5">
+      <h2 class="text-lg font-semibold text-gray-700 mb-2">Sortieren</h2>
+      <select id="sortSelect" class="w-full px-4 py-2 border border-pink-200 rounded bg-white">
+        <option value="default">Standard</option>
+        <option value="price-asc">Preis: niedrig → hoch</option>
+        <option value="price-desc">Preis: hoch → niedrig</option>
+        <option value="name-asc">Name A–Z</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Rechte Seite: Produkte -->
+  <main class="flex flex-col items-center justify-center">
+    <h1 class="text-3xl font-bold text-pink-700 mb-8 text-center">Alle Produkte</h1>
+
+    <div id="productGrid"
+         class="grid gap-6 justify-center"
+         style="grid-template-columns: repeat(3, 1fr); max-width: 1000px; width: 100%;">
+    </div>
+
+    <div id="emptyMsg"
+         class="hidden rounded-2xl bg-white border border-pink-200 p-6 text-center text-gray-600 mt-6">
+      Bald verfügbar – wir fügen gerade Produkte & Fotos hinzu.
+    </div>
+  </main>
+
+</div>
+
+
+  <!-- Footer -->
+  <footer class="mt-14 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 py-10 grid sm:grid-cols-3 gap-8 text-sm">
+      <div>
+        <div class="font-semibold mb-2">Kontakt</div>
+        <div>WhatsApp: <a class="link" href="https://wa.me/4917677992233" target="_blank">0176 77 99 22 33</a></div>
+        <div>E-Mail: <a class="link" href="mailto:Mays_r.s@yahoo.com">Mays_r.s@yahoo.com</a></div>
+      </div>
+      <div>
+        <div class="font-semibold mb-2">Adresse</div>
+        <a class="link" target="_blank"
+           href="https://www.google.com/maps/dir/?api=1&destination=Lagenbeckerstraße%20104%2C%2049477%20Ibbenbüren">
+           Lagenbeckerstraße 104, 49477 Ibbenbüren
+        </a>
+        <div class="mt-2 text-gray-600">
+          Sommer (Mo–So): 12–21 Uhr<br>
+          Winter (Mo–So): 12–20 Uhr
+        </div>
+      </div>
+      <div>
+        <div class="font-semibold mb-2">Infos</div>
+        <nav class="flex flex-wrap gap-3">
+          <a class="link" href="/ueber-uns.html">Über uns</a>
+          <a class="link" href="/faq.html">FAQ</a>
+          <a class="link" href="/versand.html">Versand & Rückgabe</a>
+          <a class="link" href="/datenschutz.html">Datenschutz</a>
+          <a class="link" href="/agb.html">AGB</a>
+        </nav>
+      </div>
+    </div>
+    <div class="text-center text-xs text-gray-500 py-6">© 2025 Mays Restaurants & Süßspeisen</div>
+  </footer>
+
+  <!-- WICHTIG: SCRIPTS -->
+ <script src="/produkte.js" defer></script>
+
+</body>
+</html>

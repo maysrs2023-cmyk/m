@@ -1,0 +1,1905 @@
+/* ======================================
+   Global / Basics
+   ====================================== */
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; }
+body{
+  background:#fdf2f8; /* pink-50 */
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:#111827; /* gray-900 */
+}
+a.link{ color:#ec4899; text-decoration:none; }
+a.link:hover{ text-decoration:underline; }
+
+/* Nummern-Spinner aus (alle Browser) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button{ -webkit-appearance:none; margin:0; }
+input[type="number"]{ -webkit-appearance:textfield; -moz-appearance:textfield; appearance:textfield; }
+
+/* Farb-Variablen */
+:root{ --pink:#ec4899; --pink-strong:#db2777; --ring:rgba(236,72,153,.25); }
+
+/* ======================================
+   Reusable UI
+   ====================================== */
+.btn{
+  display:inline-block;background:var(--pink);color:#fff;border-radius:1rem;
+  padding:.75rem 1.25rem;border:0;cursor:pointer;
+  transition:background .15s, transform .06s, filter .15s;
+}
+.btn:hover{ background:var(--pink-strong); }
+.btn:active{ transform:translateY(1px) scale(.99); }
+
+.tabs{ display:flex; gap:.5rem; flex-wrap:wrap; }
+.tab-btn{
+  padding:.5rem .9rem;border:1px solid #e5e7eb;border-radius:.85rem;background:#fff;
+  transition:background .15s,color .15s,border-color .15s;
+}
+.tab-btn.active{ background:#fce7f3;color:#be185d;border-color:var(--pink);font-weight:700; }
+
+/* 2-Spalten-Layout für Produktseite (Bild etwas größer) */
+.cols-115{ display:grid; grid-template-columns:1.15fr 1fr; gap:1.5rem; }
+@media (max-width:900px){ .cols-115{ grid-template-columns:1fr; } }
+
+/* ======================================
+   Karten / Grid (Startseite)
+   ====================================== */
+#productGrid img{ width:100%; aspect-ratio:1/1; object-fit:cover; display:block; }
+.card{ background:#fff; border-radius:1.25rem; overflow:hidden; box-shadow:0 3px 12px rgba(0,0,0,.06); }
+#productGrid a, #productGrid .card{ display:block; border-radius:1.25rem; }
+.card-anim{
+  transform:translateY(0); transition:transform .24s, box-shadow .24s, opacity .24s, filter .24s;
+  box-shadow:0 3px 12px rgba(0,0,0,.06);
+}
+.card-anim:hover{ transform:translateY(-4px); box-shadow:0 10px 24px rgba(236,72,153,.18); filter:saturate(1.03); }
+.card-anim img{ transition:transform .35s; will-change:transform; }
+.card-anim:hover img{ transform:scale(1.03); }
+.card-anim.press{ transform:translateY(0) scale(.98); }
+.reveal{ opacity:0; transform:translateY(8px); }
+.reveal.show{ opacity:1; transform:none; transition:opacity .35s, transform .35s; }
+@media (prefers-reduced-motion:reduce){ .card-anim, .card-anim img, .reveal.show{ transition:none!important; } }
+/* ======================================
+   Produktseite – Struktur
+   ====================================== */
+.p-head{ display:flex; flex-direction:column; gap:.65rem; }
+.p-price{ font-weight:800; color:#7a123f; font-size:1.35rem; line-height:1.25; }
+.p-tabs{ margin-top:1.25rem; }
+.p-buyrow{ display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; }
+.section-divider{ border:0; height:1px; background:#f1d5e2; margin:1.5rem 0 0; }
+
+/* ======================================
+   Galerie
+   ====================================== */
+.image-zoom{ position:relative; border-radius:18px; overflow:hidden; background:#f6f3f6; }
+.image-zoom img{ width:100%; height:auto; display:block; user-select:none; -webkit-user-drag:none; }
+
+/* Hero-Pfeile */
+.hero-nav{
+  position:absolute; top:50%; transform:translateY(-50%); width:40px; height:40px; border-radius:999px;
+  border:1px solid #f3d1dc; background:#fff; color:var(--pink); font-size:26px; display:flex; align-items:center; justify-content:center;
+  box-shadow:0 8px 22px rgba(236,72,153,.22); opacity:0; transition:opacity .15s, transform .15s, background .15s, color .15s;
+}
+.image-zoom:hover .hero-nav{ opacity:1; }
+.hero-nav.left{ left:10px; } .hero-nav.right{ right:10px; }
+.hero-nav:hover{ background:#ffe4ef; color:#db2777; transform:translateY(-50%) scale(1.05); }
+
+/* Thumbnails */
+.thumbs{ display:flex; gap:.5rem; margin-top:.75rem; flex-wrap:wrap; }
+.thumb{ border:2px solid transparent; border-radius:.75rem; overflow:hidden; background:#fff; transition:transform .12s; }
+.thumb img{ width:84px; height:64px; object-fit:cover; display:block; }
+.thumb.active{ border-color:var(--pink); }
+.thumb:active{ transform:scale(.98); }
+
+/* Smooth Image Switch */
+.hero-animate{ animation:heroFade .22s ease; }
+@keyframes heroFade{ from{opacity:0; transform:scale(.985);} to{opacity:1; transform:scale(1);} }
+
+/* ======================================
+   Menge – clean & modern
+   ====================================== */
+.qty-wrap{
+  display:inline-flex; align-items:center; border-radius:999px; overflow:hidden; background:#fff; border:0;
+  box-shadow:0 6px 22px rgba(0,0,0,.06), 0 2px 10px rgba(236,72,153,.10);
+}
+.qty-btn{
+  width:40px; height:40px; border:0; background:#fff; cursor:pointer; display:flex; align-items:center; justify-content:center;
+  font-size:20px; color:#374151; transition:transform .15s, background .15s, color .15s;
+}
+.qty-btn:hover{ background:#f8fafc; transform:scale(1.06); }
+.qty-btn:active{ transform:scale(.98); }
+.qty-input{
+  width:64px; text-align:center; border:0; outline:none; font-size:16px; color:#111827; padding:.38rem 0;
+  background:#f8fafc; border-radius:10px; margin:0 2px; -webkit-appearance:textfield; -moz-appearance:textfield; appearance:textfield;
+}
+/* kleinere Menge im Produktbereich */
+.p-qty .qty-btn{ width:34px; height:34px; font-size:18px; }
+.p-qty .qty-input{ width:56px; padding:.3rem 0; font-size:15px; }
+
+/* ======================================
+   Packung-Select (pink, hübsch)
+   ====================================== */
+.pack-row{ display:grid; grid-template-columns:auto minmax(0,1fr) auto; gap:.75rem; align-items:center; }
+.pack-row--lg{ grid-template-columns:90px minmax(0,1fr) auto; gap:.8rem; margin:1.1rem 0 .5rem; flex-wrap:wrap; }
+.pack-label{ font-weight:700; color:#7a123f; }
+
+.select-pink{ position:relative; }
+.select-pink select{
+  -webkit-appearance:none; -moz-appearance:none; appearance:none; width:100%; min-width:240px;
+  padding:.9rem 2.4rem .9rem 1rem; border:1px solid var(--pink); border-radius:.8rem; background:#ffeaf2;
+  font-size:1rem; font-weight:600; outline:none; color:#111; transition:all .2s ease;
+}
+.select-pink select:focus{ box-shadow:0 0 0 4px var(--ring); background:#fff5f9; border-color:var(--pink); }
+.select-pink::after{ content:"▾"; position:absolute; right:.9rem; top:50%; transform:translateY(-50%); pointer-events:none; font-weight:700; color:var(--pink); }
+
+/* (alt) extra Platz, wenn Select geöffnet – lassen wir stehen, wird unten überschrieben */
+.pack-row.open{ margin-bottom:120px; }
+
+.pack-price{
+  font-weight:800; color:#7a123f; white-space:nowrap; padding:.25rem .6rem; border-radius:.6rem; background:#fff; border:1px dashed #f9c7dc;
+}
+
+/* Warenkorb-Button breiter/auffälliger */
+.btn-buy{ min-width:320px; padding:1rem 1.6rem; font-size:17px; border-radius:.95rem; box-shadow:0 6px 18px rgba(236,72,153,.25); }
+.btn[disabled], .btn[aria-disabled="true"]{ opacity:.6; cursor:not-allowed; box-shadow:none; }
+
+/* ======================================
+   Preiszeile oben – OHNE pinke Fläche
+   ====================================== */
+.price-range{
+  display:inline-block; font-weight:800; color:#222; background:transparent; border:none; padding:0; border-radius:0; font-size:1.1rem;
+}
+.price-range .current{ color:var(--pink); }
+
+/* ======================================
+   Lightbox
+   ====================================== */
+.lb{ position:fixed; inset:0; z-index:70; display:none; align-items:center; justify-content:center; background:rgba(255,255,255,.15); backdrop-filter:blur(2px); }
+.lb.open{ display:flex; }
+.lb-box{ position:absolute; inset:0; display:grid; place-items:center; padding:28px; pointer-events:none; }
+.lb-stage{
+  position:relative; width:min(1100px,92vw); height:min(78vh,800px); background:transparent; border-radius:14px; overflow:hidden; touch-action:none; pointer-events:auto;
+}
+.lb-img{
+  display:block; max-width:100%; max-height:100%; border-radius:12px; border:8px solid #fff; box-shadow:0 12px 36px rgba(0,0,0,.18);
+  transform-origin:center center; transition:transform .05s linear;
+}
+.lb-nav{
+  position:absolute; top:50%; transform:translateY(-50%); width:42px; height:42px; border-radius:50%; background:#fff; color:var(--pink);
+  border:2px solid #fff; box-shadow:0 4px 10px rgba(0,0,0,0.15); display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:5; transition:all .2s ease; pointer-events:auto;
+}
+.lb-nav.left{ left:10px; } .lb-nav.right{ right:10px; }
+.lb-nav:hover, .lb-nav:active{ background:var(--pink); color:#fff; border-color:var(--pink); transform:translateY(-50%) scale(1.08); }
+.lb-open-anim{ animation:lbPop .18s ease-out; }
+@keyframes lbPop{ from{opacity:0; transform:scale(.98);} to{opacity:1; transform:scale(1);} }
+
+/* ======================================
+   Weitere Produkte (Related)
+   ====================================== */
+.related-wrap{ margin-top:1.25rem; }
+.related-title{ font-weight:700; color:#be185d; margin:.25rem 0 .5rem; }
+.related-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(170px, 1fr)); gap:.9rem; }
+.related-card{
+  display:block; text-decoration:none; color:inherit; background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 3px 12px rgba(0,0,0,.06);
+  transition:transform .22s, box-shadow .22s, filter .22s;
+}
+.related-card:hover{ transform:translateY(-3px); box-shadow:0 10px 22px rgba(236,72,153,.18); filter:saturate(1.03); }
+.related-card .rel-img img{ width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+.related-card .rel-txt{ padding:.6rem .7rem; }
+.related-card .rel-name{ font-weight:700; line-height:1.25rem; }
+.related-card .rel-price{ color:#7a123f; font-weight:800; margin-top:.15rem; }
+
+/* ======================================
+   Off-Canvas Menü Buttons
+   ====================================== */
+.btn-wide{
+  display:block; width:100%; text-align:left; padding:.65rem .9rem; border:1px solid #f3d1dc; border-radius:12px; background:#fff; color:#111827;
+  transition:background .15s, color .15s, border-color .15s, transform .06s;
+}
+.btn-wide:hover{ background:#fff5f9; border-color:var(--pink); }
+.btn-wide:active{ transform:scale(.99); }
+.btn-wide.active{ background:#fce7f3; color:#be185d; border-color:var(--pink); font-weight:600; }
+
+/* Kleine Chips */
+.btn-chip{ display:block; text-align:center; padding:.5rem .6rem; border:1px solid #f3d1dc; border-radius:10px; background:#fff; color:#111827; transition:background .15s, border-color .15s, transform .06s; }
+.btn-chip:hover{ background:#fff5f9; border-color:var(--pink); }
+.btn-chip:active{ transform:scale(.99); }
+/* ===== NEU: Button unter Menge + richtig breit/groß ===== */
+.p-buyrow{
+  flex-direction:column;
+  align-items:center;            /* mittig ausrichten */
+  gap:.8rem;
+}
+.btn-buy{
+  width:100%;
+  max-width:460px;
+  padding:1.1rem 1.6rem;
+  font-size:18px;
+  border-radius:1rem;
+}
+/* NEU: Abstand zwischen Menge und Warenkorb */
+.p-buyrow .qty-wrap{ margin-bottom:1rem; }
+
+/* ===== NEU: Fester Abstand rund um Packung, kein Springen ===== */
+#packRow{
+  margin-top:2rem !important;   /* fixe Luft zwischen Preis & Packung */
+  margin-bottom:2rem !important;/* fixe Luft vor Menge */
+}
+/* (überschreibt alte Regel) – kein extra Sprung mehr beim Öffnen */
+.pack-row.open{ margin-bottom:0 !important; }
+
+/* ===== NEU: Select-Box leicht nach links (nur Feld, Label bleibt) ===== */
+.pack-row--lg .select-pink{ margin-left:-1rem; } /* feinjustierbar: -0.8rem bis -1.2rem */
+
+/* ===== NEU: Select-Box minimal kompakter (nur Optik) ===== */
+.select-pink select{
+  min-width:200px;
+  padding:.8rem 2rem .8rem 1rem;
+}
+
+/* ===== NEU: Menge kompakt (passt zur größeren Buttonbreite) ===== */
+.p-qty .qty-btn{ width:34px; height:34px; font-size:18px; }
+.p-qty .qty-input{ width:56px; font-size:15px; }
+
+/* ===== NEU: Optional – alles (Menge+Button) mittig lassen ===== */
+.p-buyrow{ justify-content:center !important; }
+/* 1) Buy-Row wieder nebeneinander + unter dem Dropdown einrücken */
+.p-buyrow{
+  flex-direction: row !important;   /* nicht untereinander */
+  align-items: center;
+  gap: .8rem;
+  padding-left: calc(90px + .8rem);  /* 90px = Breite vom "Packung"-Label */
+}
+
+/* 2) Button nicht mehr volle Breite, etwas nach rechts (spiegelt das Dropdown) */
+.btn-buy{
+  width: auto !important;
+  min-width: 260px;
+  max-width: 420px;
+}
+
+/* 3) Abstand Menge↔Button klein halten (weil jetzt nebeneinander) */
+.p-buyrow .qty-wrap{ margin-bottom: 0 !important; }
+
+/* 4) Optional: auf schmalen Screens Einrückung weg (sieht besser aus) */
+@media (max-width: 640px){
+  .p-buyrow{ padding-left: 0; }
+  .btn-buy{ width: 100%; max-width: none; }
+}
+/* ===== Buy-Zeile als 2-Spalten-Grid, gespiegelt zu Packung ===== */
+.p-buyrow{
+  display: grid !important;
+  grid-template-columns: 90px minmax(0,1fr); /* 90px = Label-Breite wie bei Packung */
+  column-gap: .8 rem;
+  row-gap: .8rem;
+  align-items: center;
+}
+
+/* Menge unter die Label-Spalte ("Packung") */
+.p-buyrow .p-qty{ grid-column: 1; justify-self: start; }
+
+/* Button unter das Eingabefeld (zweite Spalte) und gleich breit wie das Feld */
+.p-buyrow #addBtn{
+  grid-column: 2;
+  width: 100%;
+  max-width: 520px;   /* gleiche Max-Breite wie das Dropdown */
+}
+
+/* Dropdown-Feld bekommt die gleiche Max-Breite -> gespiegelt */
+.select-pink select{ max-width: 520px; }
+
+/* Extra Abstand zwischen Packung und Buy-Zeile bleibt */
+#packRow{ margin-bottom: 2rem !important; }
+
+/* Handy-Ansicht: untereinander, volle Breite */
+@media (max-width: 640px){
+  .p-buyrow{ grid-template-columns: 1fr; }
+  .p-buyrow .p-qty{ grid-column: 1; }
+  .p-buyrow #addBtn{ grid-column: 1; max-width: none; }
+}
+/* Menge leicht nach rechts verschieben */
+.p-buyrow .p-qty {
+  margin-left: -7rem; /* probier 2rem, 3rem usw. bis es perfekt aussieht */
+}
+/* Button exakt unter dem Dropdown (gespiegelt) */
+.p-buyrow #addBtn {
+  grid-column: 2;        /* gleiche Spalte wie Dropdown */
+  justify-self: start;   /* links ausrichten */
+  margin-left: 0;        /* kein extra Abstand */
+}
+/* === Button unter Menge, links, groß & breit (überschreibt alles davor) === */
+.p-buyrow{
+  display: flex !important;
+  flex-direction: column !important;  /* untereinander */
+  align-items: flex-start !important;  /* links ausrichten */
+  gap: .8rem !important;
+  padding-left: 0 !important;         /* falls vorher eingerückt war */
+}
+
+.p-buyrow .p-qty{
+  order: 1 !important;
+  margin: 0 0 .6rem 0 !important;     /* kleiner Abstand zur Taste */
+}
+
+.p-buyrow #addBtn{
+  order: 2 !important;
+  width: 100% !important;
+  max-width: 560px !important;         /* breiter als vorher */
+  padding: 1.15rem 1.6rem !important;  /* größerer Button */
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  border-radius: 1rem !important;
+}
+/* Button exakt gleich breit wie das Auswahlfeld */
+.p-buyrow #addBtn {
+  width: 100% !important;
+  max-width: 520px !important;   /* gleiche Breite wie das Dropdown */
+  align-self: flex-start !important;
+  padding: 1.1rem 1.6rem !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  border-radius: 1rem !important;
+}
+/* Position vom "In den Warenkorb"-Button fein einstellen */
+.p-buyrow #addBtn {
+  margin-left: 3.5rem !important;  /* nach rechts verschieben: positive Zahl, nach links: negative */
+  margin-top: 1rem !important; /* Abstand nach oben (zur Menge) */
+  width: 100% !important;
+  max-width: 520px !important;   /* gleiche Breite wie das Dropdown */
+  align-self: flex-start !important;
+}
+/* Sanfte Animation + Platz wenn geöffnet */
+.pack-row--lg{ transition: margin .2s ease; }
+#packRow.open{ margin-bottom: 160px !important; }  /* Wert anpassen: 120–200px */
+
+/* Falls du vorher sowas drin hast, bitte löschen/auskommentieren:
+.pack-row.open{ margin-bottom:0 !important; }
+*/
+/* Extra Abstand unter dem Warenkorb + Linie weiter nach unten */
+.section-divider {
+  margin: 3rem 0 0 !important; /* mehr Abstand nach oben */
+}
+
+.p-buyrow {
+  margin-bottom: 2rem !important; /* sorgt für Abstand unter dem Button */
+}
+/* ======================================
+   Extra Abstände nach unten (mehr Luft)
+   ====================================== */
+
+/* Abstand zwischen Preis und Packung */
+.pack-row--lg {
+  margin-top: 4rem !important; /* kannst 3rem machen, wenn du mehr willst */
+}
+
+/* Abstand zwischen Packung und Menge */
+.p-qty {
+  margin-top: 1.8rem !important;
+}
+
+/* Abstand zwischen Menge und "In den Warenkorb" */
+.btn-buy {
+  margin-top: 1.8rem !important;
+}
+/* Abstand zwischen Warenkorb und Tabs (Beschreibung usw.) */
+.p-tabs {
+  margin-top: 3.5rem !important; /* kannst 4rem machen, wenn du mehr willst */
+}
+/* Mehr Abstand zwischen Preis und Packung */
+.p-price {
+  margin-bottom: 2rem !important; /* kannst 3rem probieren für mehr Platz */
+}
+/* ======================================
+   Lightbox Bild zentrieren + Pfeile anpassen
+   ====================================== */
+.lb-box {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.lb-stage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.lb-img {
+  display: block;
+  max-width: 90vw;   /* passt sich Bildschirm an */
+  max-height: 80vh;  /* nicht zu groß */
+  margin: auto;
+}
+
+/* ======================================
+   Pfeile direkt neben dem Bild (genau am Rand)
+   ====================================== */
+.lb-stage {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lb-img {
+  display: block;
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 10px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.lb-prev,
+.lb-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Pfeil links */
+.lb-prev {
+  left: 5%;
+}
+
+/* Pfeil rechts */
+.lb-next {
+  right: 5%;
+}
+/* ---- Lightbox: Pfeile direkt am Bildrand ---- */
+.lb-stage{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --imgW: 600px;            /* Fallback, wird per JS überschrieben */
+}
+
+/* vorhandene left/right Regeln übersteuern */
+.lb-nav{
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);  /* X = von Mitte aus rechnen */
+  z-index: 5;
+}
+
+/* Linker Pfeil: Mitte minus halbe Bildbreite minus Abstand */
+.lb-nav.left{
+  left: calc(50% - var(--imgW)/2 - 24px) !important;
+}
+
+/* Rechter Pfeil: Mitte plus halbe Bildbreite plus Abstand */
+.lb-nav.right{
+  left: calc(50% + var(--imgW)/2 + 24px) !important;
+}
+/* === Lightbox: Pfeile exakt neben dem Bild, ohne Überlappung === */
+.lb-stage{ --gap: 14px; } /* bisschen mehr Abstand, kannst anpassen */
+
+/* Links: Position = Bildkante – gap, und Pfeil mit rechter Kante ausrichten */
+.lb-nav.left{
+  left: calc(50% - var(--imgW)/2 - var(--gap)) !important;
+  transform: translate(-100%, -50%) !important; /* rechte Kante am Punkt */
+  z-index: 20; pointer-events: auto;
+}
+
+/* Rechts: Position = Bildkante + gap, und Pfeil mit linker Kante ausrichten */
+.lb-nav.right{
+  left: calc(50% + var(--imgW)/2 + var(--gap)) !important;
+  transform: translate(0, -50%) !important;      /* linke Kante am Punkt */
+  z-index: 20; pointer-events: auto;
+}
+
+/* Hover-Scale rund um die neue Basis-Position */
+.lb-nav:hover{
+  transform: translate(var(--tx,0), -50%) scale(1.08) !important;
+}
+.lb-nav.left:hover{  --tx: -100%; }
+.lb-nav.right:hover{ --tx: 0; }
+/* Produktseite: sanftes Slide/Fade */
+#heroImg{ transition: opacity .24s ease, margin .24s ease; }
+.hero-swap-left  { opacity:0; margin-left:-16px; }
+.hero-swap-right { opacity:0; margin-left: 16px; }
+/* === Preisbereich + Sterne auf Startseite === */
+.price-range-small {
+  font-weight: 700;
+  color: #7a123f; /* dunkles Pink */
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.price-range-small span {
+  color: #6b7280; /* helleres Grau für "inkl. MwSt." */
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+/* Sterne unter Preis (noch nicht bewertet) */
+.card-stars {
+  display: flex;
+  gap: 2px;
+  margin-top: 0.25rem;
+  font-size: 1rem;
+  color: #d1d5db; /* hellgrau (leere Sterne) */
+}
+
+.card-stars span {
+  transition: color 0.2s ease;
+}
+
+.card-stars span:hover {
+  color: #facc15; /* gold beim Hover */
+}
+/* ================================
+   Weitere Produkte – Styles
+   ================================ */
+.related-wrap{
+  margin: 3rem 0 2.5rem;
+}
+.related-title{
+  font-size: clamp(1.6rem, 2.2vw, 2rem);
+  font-weight: 800;
+  color:#be185d;              /* dunkles Pink */
+  letter-spacing:-.01em;
+  margin: 0 0 1rem;
+}
+
+/* Grid */
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1rem;
+}
+@media (min-width:640px){ .related-grid{ grid-template-columns:repeat(3,1fr); } }
+@media (min-width:768px){ .related-grid{ grid-template-columns:repeat(4,1fr); } }
+
+/* Karte */
+.related-card{
+  display:block;
+  background:#fff;
+  border:1px solid #f3d1dc;
+  border-radius:16px;
+  overflow:hidden;
+  box-shadow:0 3px 10px rgba(0,0,0,.06);
+  transition:transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+.related-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 24px rgba(236,72,153,.18);
+  filter:saturate(1.03);
+}
+.related-card:focus{
+  outline:3px solid rgba(236,72,153,.35);
+  outline-offset:2px;
+}
+
+/* Bild */
+.rel-img{
+  aspect-ratio:4/3;
+  background:#fff;
+  display:grid;
+  place-items:center;
+  overflow:hidden;
+}
+.rel-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* Text */
+.rel-txt{ padding:.65rem .8rem; }
+.rel-name{
+  font-weight:700;
+  line-height:1.25;
+  color:#111827;
+  margin:0;
+}
+.rel-price{
+  margin-top:.2rem;
+  color:#7a123f;              /* Preisfarbe konsistent */
+  font-weight:800;
+}
+
+/* Kleine Optik-Feinschliffe */
+.related-grid .related-card:not(:hover) .rel-img img{
+  transition: transform .35s ease;
+}
+.related-grid .related-card:hover .rel-img img{
+  transform: scale(1.03);
+}
+/* ===== Related: Carousel + Card-Details ===== */
+.rel-viewport {
+  overflow: hidden;
+  position: relative;
+}
+.rel-track {
+  display: flex;
+  gap: 16px;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  padding-bottom: 0.25rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.rel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.rel-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid #f3d1dc;
+  background: #fff;
+  color: #db2777;
+  font-weight: 800;
+  line-height: 0;
+  box-shadow: 0 3px 10px rgba(236, 72, 153, 0.12);
+  transition: 0.15s;
+  display: grid;
+  place-items: center;
+}
+.rel-btn:hover {
+  transform: translateY(-1px);
+  background: #fff0f6;
+}
+.rel-btn[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Karten im Carousel */
+.related-card {
+  width: 260px;
+  flex: 0 0 auto;
+}
+@media (max-width: 480px) {
+  .related-card {
+    width: 78vw;
+  }
+}
+
+/* Zusatzinfos */
+.rel-meta {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.1rem;
+}
+.rel-stars {
+  color: #f59e0b;
+  letter-spacing: 0.1em;
+  font-size: 0.9rem;
+}
+.rel-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+.btn-mini {
+  padding: 0.45rem 0.7rem;
+  border-radius: 0.6rem;
+  background: var(--pink);
+  color: #fff;
+  font-weight: 700;
+  transition: 0.15s;
+  white-space: nowrap;
+}
+.btn-mini:hover {
+  background: var(--pink-strong);
+}
+/* --- Fixes: Preisfarbe & Pfeile --- */
+.rel-price{ color: var(--pink) !important; }   /* Preis jetzt rosa */
+.rel-btn{ position: relative; z-index: 5; pointer-events: auto; }
+.link{ color: var(--pink); }
+.link:hover{ text-decoration: underline; }
+/* FUTTER-Box */
+.futter-section {
+  border: 1px solid #f3d1dc;
+  background: #fff;
+  border-radius: 12px;
+}
+.futter-section h3 { color: #7a123f; margin: 0 0 .5rem; }
+.futter-section p { color: #374151; line-height: 1.5; margin: 0; }
+/* FUTTER: full-width background (bleed) */
+.futter-bleed {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  background: #ffffff;              /* weiße Fläche bis an den Rand */
+  border-top: 1px solid #f3d1dc;    /* opt. Trennlinie */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+  z-index: 0;
+}
+
+/* innerer Inhalt bleibt zentriert und behält max-width */
+.futter-bleed .futter-inner {
+  max-width: 1100px; /* entspricht max-w-7xl / justierbar */
+  margin: 0 auto;
+}
+
+/* kleiner Abstand / Styling für die Copyright-Zeile */
+.futter-bleed .futter-bottom {
+  border-top: none;
+  background: transparent;
+}
+/* Mehr Abstand zwischen "Weitere Produkte" und Futter/Footer */
+.rel-wrap, .related-wrap { margin-bottom: 3.5rem !important; } /* Abstand unter den Related-Karten */
+.futter-section, .futter-bleed { margin-top: 3.5rem !important; } /* Abstand oberhalb vom Footer/Futter */
+@media (max-width: 640px){
+  .rel-wrap, .related-wrap { margin-bottom: 2rem !important; }
+  .futter-section, .futter-bleed { margin-top: 2rem !important; }
+}
+.futter-section { background: #fff; }
+.futter-section .container { max-width:1100px; margin:0 auto; padding: 0 1rem; }
+.futter-inner h3{ margin:0 0 .5rem; color:#7a123f; font-weight:700; }
+.futter-inner p{ color:#374151; margin:0; }
+.products-grid{display:flex;flex-wrap:wrap;gap:16px;padding:16px}
+.product-card{width:280px;border-radius:10px;background:#fff;padding:12px;box-shadow:0 6px 18px rgba(0,0,0,0.04);display:flex;flex-direction:column;align-items:flex-start}
+.product-img{width:100%;height:160px;object-fit:cover;border-radius:8px;background:#f6f6f6}
+.product-title{margin:10px 0 4px;font-size:16px}
+.product-cat{font-size:13px;color:#666;margin-bottom:8px}
+.product-price{color:#c0396b;font-weight:700;margin-top:6px}
+.product-btn{margin-top:10px;padding:8px 10px;background:#c84b7b;color:#fff;border:none;border-radius:8px;cursor:pointer}
+.btn-pink {
+  background-color: #ec4899;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.btn-pink:hover {
+  background-color: #db2777;
+}
+/* Startseite – genau 4 Karten nebeneinander, responsiv */
+.start-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+/* Schönerer Filter-Style */
+.cat-btn {
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.cat-btn:hover {
+  background-color: #fce7f3; /* leichtes Rosa */
+  border-color: #f472b6;     /* pinker Rand */
+  color: #be185d;            /* dunkles Pink */
+  transform: translateX(3px);
+}
+
+.cat-btn.active {
+  background-color: #f472b6;
+  color: white;
+  font-weight: 600;
+  border-color: #f472b6;
+}
+/* 🟣 Filter-Buttons schöner */
+.cat-btn {
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(255, 192, 203, 0.2);
+}
+
+.cat-btn:hover {
+  background-color: #fce7f3;
+  transform: scale(1.02);
+}
+
+.cat-btn.bg-pink-200 {
+  background-color: #fbcfe8 !important;
+  color: #be185d !important;
+  font-weight: bold;
+}
+
+/* 🟣 Sortier-Auswahl cuter */
+#sortSelect {
+  border-radius: 1rem;
+  border: 2px solid #f9a8d4;
+  background-color: white;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 2px 8px rgba(249, 168, 212, 0.25);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg fill='pink' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1.2em;
+}
+
+#sortSelect:focus {
+  outline: none;
+  border-color: #ec4899;
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.3);
+}
+/* 🌸 Kategorie-Buttons noch cuter */
+#categoryFilters .cat-btn {
+  border-radius: 999px;
+  border: 2px solid #fbcfe8;
+  background-color: #fff0f6;
+  color: #7f1d1d;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(255, 192, 203, 0.15);
+  transition: all 0.3s ease;
+}
+
+/* Hover-Effekt */
+#categoryFilters .cat-btn:hover {
+  background-color: #fce7f3;
+  color: #be185d;
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 4px 10px rgba(249, 168, 212, 0.3);
+}
+
+/* Aktive Kategorie */
+#categoryFilters .cat-btn.bg-pink-100 {
+  background-color: #fbcfe8;
+  color: #be185d;
+  font-weight: bold;
+  box-shadow: 0 0 0 3px rgba(249, 168, 212, 0.4);
+}
+/* Einheitlicher Stil für Kategorie-Buttons (wie Sortieren-Dropdown) */
+.cat-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 1rem;
+  background-color: white;
+  border: 2px solid #f9c6d4;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.cat-btn:hover {
+  background-color: #fff0f5;
+  border-color: #f9c6d4;
+  box-shadow: 0 4px 12px rgba(249, 198, 212, 0.4);
+}
+
+.cat-btn.bg-pink-100,
+.cat-btn.active {
+  background-color: #fff0f5 !important;
+  border-color: #f9c6d4 !important;
+  color: #a80050 !important;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(249, 198, 212, 0.6);
+}
+/* Basis-Stil für alle Kategorie-Buttons */
+.cat-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 1rem;
+  background-color: white;
+  border: 2px solid #f4f4f4;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+/* Hover-Effekt */
+.cat-btn:hover {
+  background-color: #fdf2f8;
+  transform: scale(1.01);
+}
+
+/* Aktive Kategorie (die gerade ausgewählt ist) */
+.cat-btn.active {
+  background-color: #ffffff;
+  color: #b91c1c;
+  font-weight: bold;
+  border-color: #f3e9ee;
+  transform: scale(1.02);
+}
+
+.cat-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 1rem;
+  background-color: white; /* Standard weiß */
+  border: 2px solid #f9c6d4;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+.cat-btn:hover {
+  background-color: #fdf2f8; /* Leichtes Hover rosa */
+  transform: scale(1.01);
+}
+
+.cat-btn.active {
+  background-color: #f9c6d4; /* Aktives Pink */
+  color: #9d174d;            /* Dunkelpink Text */
+  font-weight: 600;
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(249, 198, 212, 0.3);
+}
+.cat-btn {
+  background-color: white;
+  color: #333;
+  border: 1px solid #f9a8d4; /* heller Rosa-Rand */
+  transition: all 0.3s ease;
+  border-radius: 0.75rem; /* etwas runder */
+}
+
+.cat-btn:hover {
+  background-color: #ffe4f1; /* leicht rosa beim Hover */
+}
+
+.cat-btn.active {
+  background-color: #f9a8d4; /* Pinker Hintergrund */
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(249, 168, 212, 0.4); /* weicher Schatten */
+}
+.cat-btn {
+  background-color: white;
+  border: 2px solid #f9a8d4; /* pink */
+  border-radius: 9999px; /* pill shape */
+  padding: 0.5rem 1rem;
+  width: 100%;
+  text-align: left;
+  transition: all 0.3s ease;
+  color: #374151; /* text-gray-700 */
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.cat-btn:hover {
+  background-color: #fce7f3; /* hellrosa beim Hover */
+}
+
+.cat-btn.active {
+  background-color: #fbcfe8; /* rosa Hintergrund wenn aktiv */
+  color: #be185d; /* text-pink-700 */
+  font-weight: bold;
+  box-shadow: 0 0 0 2px #f9a8d4;
+  transform: scale(1.02);
+}
+.cat-btn.active {
+  background-color: #fce7f3; /* helles rosa */
+  color: #be185d;            /* dunkleres rosa Text */
+  font-weight: 600;
+  box-shadow: 0 0 0 2px #f9a8d4; /* leichter pinker Schatten */
+  transition: all 0.2s ease;
+}
+.cat-btn {
+  background-color: white;
+  color: #444;
+  border: 1px solid #f9a8d4;
+  border-radius: 9999px;
+  transition: all 0.2s ease;
+}
+
+.cat-btn.active {
+  background-color: #fce7f3; /* zartes Rosa */
+  color: #be185d;           /* kräftiges Pink */
+  font-weight: bold;
+  box-shadow: 0 0 0 2px #f9a8d4;
+}
+.rel-head h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: #d12a7a; /* schönes Pink – kannst du ändern */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* weicher Schatten */
+  margin-bottom: 10px;
+    border-bottom: 2px solid #d12a7a;
+  padding-bottom: 6px;
+
+}
+/* Weitere Produkte Überschrift */
+.rel-head h2 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #d12a7a;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* Animierter Strich unter „Weitere Produkte“ */
+.rel-head h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #d12a7a;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-in-out;
+}
+
+/* Sobald die Seite lädt, animiert der Strich rein */
+.rel-head h2.appear::after {
+  transform: scaleX(1);
+}
+#relTitle {
+  position: relative;
+  display: inline-block;
+  font-size: 28px;
+  font-weight: 800;
+  color: #d12a7a;
+  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.15);
+  padding-bottom: 8px;
+}
+
+#relTitle::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #d12a7a;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease-in-out;
+}
+
+#relTitle.animate::after {
+  transform: scaleX(1);
+}
+.variant-select {
+  padding: 8px 12px;
+  border: 2px solid #ec4899; /* rosa Rahmen */
+  border-radius: 8px;
+  background-color: #fff0f5; /* zart rosa Hintergrund */
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  color: #4b5563; /* grau */
+  margin-top: 8px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.variant-select:hover {
+  border-color: #db2777;
+  background-color: #ffe4ec;
+}
+
+
+
+
+
+
+
+/* ===== MOBILE STEP 1: HEADER wie Referenz (Menü | Logo | Cart + Suche darunter) ===== */
+@media (max-width: 768px) {
+
+  /* Header als "Stage" */
+  header.max-w-7xl{
+    position: relative !important;
+    display: block !important;
+    padding: 12px 14px 10px 14px !important;
+  }
+
+  /* Dein linkes Block (Menü + Logo-Link) */
+  header.max-w-7xl > div{
+    width: 100% !important;
+  }
+
+  /* Menü links oben */
+  #menuBtn{
+    position: absolute !important;
+    left: 14px !important;
+    top: 14px !important;
+    z-index: 50 !important;
+    border-radius: 14px !important;
+  }
+
+  /* Warenkorb rechts oben */
+  header.max-w-7xl > a[href="/cart.html"]{
+    position: absolute !important;
+    right: 14px !important;
+    top: 14px !important;
+    z-index: 50 !important;
+    border-radius: 999px !important;
+  }
+
+  /* Logo mittig oben (groß) */
+  header.max-w-7xl a[href="/index.html"]{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin-top: 2px !important;
+  }
+
+  header.max-w-7xl a[href="/index.html"] img{
+    height: 115px !important; /* Logo groß, aber nicht zu riesig */
+    width: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  /* Suche: volle Breite direkt unter dem Logo */
+  #searchForm{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 10px auto 0 auto !important;
+    padding: 0 !important;
+  }
+
+  #searchInput{
+    width: 100% !important;
+    border-radius: 999px !important;
+    padding-top: 12px !important;
+    padding-bottom: 12px !important;
+    font-size: 16px !important;
+  }
+
+  /* Kleiner Abstand zum nächsten Abschnitt (Willkommen) */
+  section.max-w-7xl{
+    margin-top: 10px !important;
+  }
+}
+
+/* =========================
+   MOBILE PRODUKT GRID
+   ========================= */
+@media (max-width: 640px) {
+
+  /* 2 nebeneinander */
+  #productGrid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  /* Karten kleiner machen */
+  #productGrid article {
+    max-width: 100% !important;
+    margin: 0 !important;
+    border-radius: 16px !important;
+  }
+
+  /* Bilder NICHT schneiden */
+  #productGrid img {
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+    object-fit: contain !important;
+    background: #fff;
+    padding: 6px;
+  }
+
+  /* Text kompakter */
+  #productGrid h3 {
+    font-size: 14px !important;
+    line-height: 1.2;
+  }
+
+  #productGrid .text-sm {
+    font-size: 12px !important;
+  }
+
+  #productGrid .text-base {
+    font-size: 13px !important;
+  }
+
+  /* Button kleiner */
+  #productGrid button {
+    font-size: 13px !important;
+    padding: 8px 10px !important;
+    border-radius: 12px !important;
+  }
+}
+
+
+/* =========================
+   MOBILE PRODUKTE – CLEAN
+   ========================= */
+@media (max-width: 640px) {
+
+  /* GRID: 2 NEBENEINANDER */
+  #productGrid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px !important;
+  }
+
+  /* KARTE KOMPAKT */
+  #productGrid article {
+    max-width: 100% !important;
+    border-radius: 18px !important;
+    overflow: hidden !important; /* wichtig für randloses Bild */
+    background: #fff;
+  }
+
+  /* BILD = OHNE RAND */
+  #productGrid .card-img-wrap {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  #productGrid img {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+    object-fit: cover !important; /* kein weißer Rand */
+    padding: 0 !important;
+    margin: 0 !important;
+    background: none !important;
+    border-radius: 0 !important;
+  }
+
+  /* TEXTBEREICH */
+  #productGrid article > div {
+    padding: 10px !important;
+  }
+
+  #productGrid h3 {
+    font-size: 14px !important;
+    line-height: 1.25;
+    margin-bottom: 2px;
+  }
+
+  #productGrid .text-sm {
+    font-size: 12px !important;
+  }
+
+  #productGrid .text-base {
+    font-size: 13px !important;
+  }
+
+  /* BUTTON KOMPAKT */
+  #productGrid button {
+    padding: 8px !important;
+    font-size: 13px !important;
+    border-radius: 12px !important;
+  }
+
+  /* STERNE KLEIN */
+  #productGrid .text-lg {
+    font-size: 12px !important;
+  }
+}
+
+/* =========================================
+   MOBILE ONLY – "Alle Produkte ansehen" fett
+   ========================================= */
+@media screen and (max-width: 768px) {
+
+  /* Container bleibt wie er ist (nur Mobile) */
+  .products-header,
+  .products-title-row,
+  .flex.justify-between.items-center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 24px !important;
+  }
+
+  /* 🔥 ALLE PRODUKTE ANSEHEN – FETT */
+  .products-header h2,
+  .products-title-row h2,
+  .flex.justify-between.items-center h2 {
+    font-weight: 800 !important;   /* FETT */
+    font-size: 16px !important;    /* sauber, nicht zu groß */
+    letter-spacing: 0.2px !important;
+  }
+
+  /* "Mehr anzeigen" bleibt normal */
+  .products-header a,
+  .products-title-row a,
+  .flex.justify-between.items-center a {
+    font-weight: 500 !important;
+    font-size: 13px !important;
+    margin-left: auto !important;
+    padding-left: 20px !important;
+    white-space: nowrap !important;
+  }
+
+}
+
+/* =========================================
+   MOBILE ONLY – Willkommen-Box (EXAKT dein Element)
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* SECTION selber etwas kompakter */
+  section.max-w-7xl.my-6 {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* DIE WILLKOMMEN-BOX: exakt die Tailwind-Klassen aus deinem HTML */
+  section.max-w-7xl.my-6 > div.rounded-3xl.bg-gradient-to-b.from-pink-200\/70.to-pink-100.p-10.text-center {
+    padding: 14px !important;        /* überschreibt p-10 */
+    border-radius: 18px !important;
+  }
+
+  /* Titel kleiner */
+  section.max-w-7xl.my-6 > div.rounded-3xl.bg-gradient-to-b.from-pink-200\/70.to-pink-100.p-10.text-center h1 {
+    font-size: 22px !important;
+    line-height: 1.2 !important;
+    margin-bottom: 6px !important;
+  }
+
+  /* Text kleiner */
+  section.max-w-7xl.my-6 > div.rounded-3xl.bg-gradient-to-b.from-pink-200\/70.to-pink-100.p-10.text-center p {
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+  }
+}
+ 
+
+
+
+
+
+
+/* =========================================
+   MOBILE ONLY – PRODUKTKARTEN KOMPAKT (FINAL)
+   ========================================= */
+@media (max-width: 768px) {
+
+  /* Karte selbst */
+  .product-card {
+    padding: 4px !important;
+  }
+
+  /* Bild – KEIN CROPPING */
+  .product-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-bottom: 3px !important;
+  }
+
+  /* Titel */
+  .product-card h3,
+  .product-card h4 {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 2px 0 !important;
+  }
+
+  /* Kategorie */
+  .product-card .category {
+    font-size: 12px;
+    margin-bottom: 2px !important;
+  }
+
+  /* Preis */
+  .product-card .price {
+    font-size: 13px;
+    margin-bottom: 3px !important;
+  }
+
+  /* Sterne */
+  .product-card .rating {
+    margin-bottom: 3px !important;
+  }
+
+  /* Button */
+  .product-card button {
+    padding: 6px 8px !important;
+    font-size: 13px;
+    margin-top: 2px !important;
+  }
+}
+
+/* ===== Schöner Zurück-Button ===== */
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 500;
+
+  color: #db2777;
+  background: #fff;
+  border: 1px solid #fbcfe8;
+  border-radius: 9999px;
+
+  box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+  cursor: pointer;
+
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.back-btn:hover {
+  background: #fdf2f8;
+  transform: translateY(-1px);
+}
+
+
+/* Warenkorb Button – elegant & clean */
+.cart-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  padding: 10px 12px;
+  border-radius: 999px;
+
+  background: rgba(236, 72, 153, 0.08); /* soft pink */
+  border: 1px solid rgba(236, 72, 153, 0.25);
+
+  transition: all 0.25s ease;
+}
+
+.cart-btn:hover {
+  background: rgba(236, 72, 153, 0.18);
+  transform: scale(1.05);
+}
+
+.cart-btn svg {
+  transition: transform 0.25s ease;
+}
+
+.cart-btn:hover svg {
+  transform: translateY(-1px);
+}
+
+
+/* ===== Cart Animation ===== */
+
+@keyframes cart-bounce {
+  0%   { transform: translateY(-50%) scale(1); }
+  30%  { transform: translateY(-50%) scale(1.08); }
+  60%  { transform: translateY(-50%) scale(0.98); }
+  100% { transform: translateY(-50%) scale(1); }
+}
+
+@keyframes badge-pop {
+  0%   { transform: scale(1); }
+  35%  { transform: scale(1.35); }
+  70%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+/* Klasse, die wir kurz hinzufügen */
+.cart-animate {
+  animation: cart-bounce 420ms ease;
+}
+
+.badge-animate {
+  animation: badge-pop 380ms ease;
+}
+
+/* Optional: bisschen schöner Hover */
+.cart-btn {
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.cart-btn:hover {
+  transform: translateY(-50%) scale(1.03);
+  box-shadow: 0 8px 18px rgba(236, 72, 153, 0.15);
+}
+
+
+/* Warenkorb Badge Animation */
+.cart-bounce {
+  animation: badgePop 0.35s ease;
+}
+
+@keyframes badgePop {
+  0%   { transform: scale(1); }
+  30%  { transform: scale(1.4); }
+  60%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+
+/* ===============================
+   QUICK NAV – CLEAN / NIKE STYLE
+   =============================== */
+
+.quick-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 28px;
+
+  margin-top: 28px;      /* Abstand unter Suche */
+  margin-bottom: -6px;   /* zieht Tabs an die Weiß/Pink-Grenze */
+}
+
+/* Tabs wie Nike / Adidas */
+.quick-btn {
+  position: relative;
+  background: none;
+  border: none;
+  padding: 4px 0;
+
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+
+  color: #9d174d;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+/* Unterstrich – nur bei Hover */
+.quick-btn::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+
+  width: 0%;
+  height: 2px;
+  background-color: #ec4899;
+
+  transition: width 0.25s ease;
+}
+
+/* Hover */
+.quick-btn:hover {
+  color: #ec4899;
+}
+
+.quick-btn:hover::after {
+  width: 100%;
+}
+
+/* Desktop & Mobile: IMMER unter der Suche */
+@media (min-width: 768px) {
+  .quick-nav {
+    grid-column: 1 / -1;
+  }
+}
+
+
+/* ===============================
+   Kategorien – Accordion Style
+   =============================== */
+
+.categories-toggle {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #f9a8d4;
+  padding: 12px 16px;
+  font-weight: 700;
+  color: #9d174d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.categories-list {
+  margin-top: 10px;
+  display: none;
+}
+
+.categories-list.open {
+  display: block;
+}
+
+.categories-list .cat-btn {
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  margin-bottom: 6px;
+  border: 1px solid #f9a8d4;
+  background: #fff;
+  border-radius: 10px;
+}
+
+
+
+/* ===============================
+   PRESSE – CLEAN & CENTERED
+   =============================== */
+
+.press-card {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 22px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.press-source {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.press-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #9d174d;
+  margin-bottom: 16px;
+}
+
+.press-image {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid #f3d0df;
+  margin-bottom: 18px;
+}
+
+.press-link {
+  display: inline-block;
+  font-weight: 600;
+  color: #ec4899;
+  text-decoration: none;
+}
+
+.press-link:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Feinschliff */
+@media (max-width: 640px) {
+  .press-card {
+    padding: 18px;
+  }
+
+  .press-title {
+    font-size: 20px;
+  }
+}
+
+/* ===============================
+   PRESSE – GLOW ÜBERSCHRIFT
+   =============================== */
+
+.press-heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  color: #9d174d;
+  margin: 40px 0;
+  letter-spacing: 0.4px;
+}
+
+/* Sanfter Glow */
+.press-heading.glow {
+  text-shadow:
+    0 0 6px rgba(236, 72, 153, 0.35),
+    0 0 14px rgba(236, 72, 153, 0.25);
+}
+
+/* ❌ Linie bewusst entfernt – clean & elegant */
+
+/* Mobile Anpassung */
+@media (max-width: 640px) {
+  .press-heading {
+    font-size: 26px;
+    margin: 28px 0;
+  }
+}
+
+
+/* 🔧 Kategorien + Sortieren: links und kleiner auf Laptop */
+@media (min-width: 1024px) {
+  .categories,
+  .sortieren-box {
+    width: 250px;          /* schmaler machen */
+    float: left;           /* nach links schieben */
+    margin-right: 2rem;    /* Abstand zu den Produkten */
+  }
+
+  /* Damit das Sortieren-Feld gleich aussieht */
+  .sortieren-box select {
+    width: 100%;
+  }
+}
+
+/* 🔧 Auf Handy & Tablet: alles wieder normal (untereinander) */
+@media (max-width: 1023px) {
+  .categories,
+  .sortieren-box {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1024px) {
+  .categories {
+    float: left;
+    width: 250px;
+    margin-right: 2rem;
+  }
+}
+
+
+
+.categories {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+    margin-bottom: 9rem; /* 👈 DAS fügt den Abstand nach unten ein */
+}
+
+/* das Dropdown */
+.categories-list {
+  position: absolute;
+  top: 48px; /* ← DAS sorgt dafür, dass es direkt unter dem Button öffnet */
+  left: 0;
+  background: white;
+  border: 1px solid #f9a8d4;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: none;
+  z-index: 100;
+  width: 220px;
+}
+
+/* Offen */
+.categories-list.open {
+  display: block;
+  animation: fadeIn 0.25s ease;
+}
+
+/* Kategorie-Buttons schöner */
+.categories-list .cat-btn {
+  width: 100%;
+  text-align: left;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  font-size: 15px;
+  font-weight: 500;
+  color: #9d174d;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.categories-list .cat-btn:hover {
+  background: #fdf2f8;
+  color: #db2777;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Linke Filter-Spalte --- */
+.filter-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+/* Ab Laptop-Größe: links schmal halten */
+@media (min-width: 768px) {
+  .filter-sidebar {
+    width: 230px;
+  }
+}
+
+/* =============== */
+/* Kategorien + Sortieren enger zusammen */
+/* Gilt für Laptop + Handy */
+/* =============== */
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem; /* kleiner Abstand zwischen Kategorien und Sortieren */
+  margin-bottom: 1.5rem;
+}
+
+.sortieren-box {
+  margin-top: 0 !important; /* kein extra Abstand */
+}
+
+/* Kategorien-Dropdown direkt unter dem Button */
+.categories-list {
+  position: absolute;
+  top: 42px !important; /* öffnet sich genau unter dem Button */
+  left: 0;
+  background: white;
+  border: 1px solid #f9a8d4;
+  border-radius: 12px;
+  padding: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  display: none;
+  z-index: 100;
+  width: 220px;
+}
+
+/* Offen-Zustand */
+.categories-list.open {
+  display: block;
+  animation: fadeIn 0.25s ease;
+}
+
+/* sanfte Öffnungsanimation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- Fix: Menübutton bleibt immer klickbar --- */
+#menuBtn {
+  position: relative;
+  z-index: 50; /* höher als Logo oder andere Elemente */
+}
+
+
+/* ===== MOBILE FIX ===== */
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-bar,
+  input[type="search"] {
+    width: 100%;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .welcome-box {
+    padding: 16px;
+    margin-top: 10px;
+  }
+}

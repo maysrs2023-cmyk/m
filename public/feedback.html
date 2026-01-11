@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="de"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Feedback – Mays</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="/style.css">
+</head><body class="min-h-screen bg-pink-50">
+<div class="bg-white border-b border-gray-100">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/index.html" class="text-pink-600 hover:underline">&larr; Zur Startseite</a>
+    <b>Feedback</b><span></span>
+  </div>
+</div>
+
+<main class="max-w-3xl mx-auto px-4 py-6">
+  <div class="bg-white rounded-2xl shadow p-6">
+    <h1 class="text-2xl font-bold mb-3">Dein Feedback</h1>
+    <form id="fbForm" action="https://formspree.io/f/DEIN_FORM_ID" method="POST" class="grid gap-3">
+      <input class="input" type="text" name="name" placeholder="Dein Name (optional)">
+      <input class="input" type="email" name="email" placeholder="Deine E-Mail (für Antwort)">
+      <textarea class="input" name="message" placeholder="Schreibe uns deine Nachricht …" rows="6" required></textarea>
+      <input type="hidden" name="_subject" value="Neues Feedback von mays.de">
+      <button class="mt-1 px-4 py-2 rounded-xl bg-pink-500 text-white hover:bg-pink-600" type="submit">Absenden</button>
+      <p class="text-xs text-gray-500">Mit dem Absenden stimmst du unserer Datenschutzerklärung zu.</p>
+    </form>
+    <div id="fbOk" class="hidden mt-3 p-3 rounded-xl bg-green-50 text-green-700">Danke! Dein Feedback wurde gesendet.</div>
+    <div id="fbErr" class="hidden mt-3 p-3 rounded-xl bg-red-50 text-red-700">Fehler beim Senden. Bitte später erneut versuchen.</div>
+  </div>
+</main>
+
+<script>
+  // Optional: AJAX, um auf der Seite zu bleiben
+  const form = document.getElementById('fbForm');
+  const ok = document.getElementById('fbOk');
+  const err = document.getElementById('fbErr');
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    try{
+      const res = await fetch(form.action, {
+        method: "POST",
+        headers: { "Accept":"application/json" },
+        body: new FormData(form)
+      });
+      if(res.ok){ form.reset(); ok.classList.remove('hidden'); err.classList.add('hidden'); }
+      else { ok.classList.add('hidden'); err.classList.remove('hidden'); }
+    }catch(_){ ok.classList.add('hidden'); err.classList.remove('hidden'); }
+  });
+</script>
+
+<style>
+  .input{ width:100%; border:1px solid #fecdd3; border-radius:0.75rem; padding:.6rem .8rem; outline:0 }
+  .input:focus{ box-shadow:0 0 0 3px rgba(236,72,153,.35); border-color:#f9a8d4 }
+</style>
+</body></html>

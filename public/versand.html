@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Versand & Rückgabe – Mays</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Dein CSS -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+
+<body class="bg-pink-50 min-h-screen flex flex-col">
+
+<!-- HEADER -->
+<header class="bg-white border-b border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 py-3 grid grid-cols-[auto,1fr,auto] items-center">
+
+    <!-- Zurück -->
+    <a href="/index.html"
+       class="text-sm font-medium text-gray-700 hover:text-pink-600">
+      Zurück
+    </a>
+
+    <!-- Logo -->
+    <div class="flex justify-center">
+      <a href="/index.html">
+        <img src="/images/mays.png"
+             alt="Mays Logo"
+             class="h-16 md:h-20 object-contain" />
+      </a>
+    </div>
+
+    <!-- Warenkorb -->
+    <a href="/cart.html"
+       class="relative p-2 rounded-full border border-pink-200 hover:bg-pink-50">
+      <svg class="h-6 w-6 text-gray-800"
+           viewBox="0 0 24 24"
+           fill="none"
+           stroke="currentColor"
+           stroke-width="2">
+        <path d="M3 3h2l2.2 10.5a2 2 0 0 0 2 1.5h8.6a2 2 0 0 0 2-1.6l1.1-6.4H6.1"/>
+        <circle cx="9" cy="20" r="1.6"/>
+        <circle cx="18" cy="20" r="1.6"/>
+      </svg>
+      <span id="cartBadge"
+            class="absolute -top-1 -right-1 text-[11px] bg-pink-500 text-white rounded-full px-1.5 py-0.5">
+        0
+      </span>
+    </a>
+
+  </div>
+</header>
+
+<!-- INHALT -->
+<main class="flex-grow max-w-3xl mx-auto px-4 py-10">
+  <div class="bg-white rounded-2xl shadow p-6 md:p-8 prose max-w-none">
+
+    <h1 class="text-center text-pink-700 font-extrabold text-3xl mb-8">
+      Versand & Rückgabe
+    </h1>
+
+    <p>
+      Bei dem Verkauf unserer Produkte handelt es sich überwiegend um Lebensmittel,
+      Süßwaren, Backwaren und verderbliche Waren. Aus Gründen des Gesundheitsschutzes,
+      der Hygiene sowie der Lebensmittelsicherheit besteht für diese Produkte kein
+      gesetzliches Widerrufsrecht. Eine Rückgabe oder ein Umtausch der Ware nach Erhalt
+      ist daher ausgeschlossen, auch dann, wenn die Verpackung ungeöffnet ist.
+    </p>
+
+    <p>
+      Dies gilt für alle Bestellungen innerhalb Deutschlands sowie für Lieferungen
+      in andere Länder der Europäischen Union. Wir bitten um Verständnis, dass
+      geöffnete, angebrochene oder versiegelte Lebensmittel grundsätzlich nicht
+      zurückgenommen werden können.
+    </p>
+
+    <p>
+      Eine Rücksendung aus persönlichen Gründen, etwa wegen Nichtgefallens oder
+      falscher Bestellung, ist ebenfalls ausgeschlossen. Mit Abschluss der Bestellung
+      erklärt sich der Kunde ausdrücklich mit diesem Ausschluss des Widerrufsrechts
+      einverstanden.
+    </p>
+
+    <p>
+      Unberührt davon bleiben die gesetzlichen Gewährleistungsrechte. Sollte eine
+      Bestellung beschädigt, verdorben, unvollständig oder falsch geliefert worden
+      sein, bitten wir darum, uns unverzüglich nach Erhalt der Ware zu kontaktieren.
+      In solchen Fällen prüfen wir den Sachverhalt sorgfältig und bieten eine
+      angemessene Lösung an, zum Beispiel eine Ersatzlieferung oder eine Rückerstattung.
+    </p>
+
+    <p>
+      Reklamationen sollten möglichst zeitnah erfolgen und – sofern möglich –
+      durch Fotos der Ware oder Verpackung unterstützt werden. Später eingehende
+      Reklamationen können unter Umständen nicht mehr berücksichtigt werden.
+    </p>
+
+    <p>
+      Diese Regelungen gelten einheitlich für alle Kunden innerhalb der Europäischen
+      Union und entsprechen den geltenden verbraucherschutzrechtlichen Bestimmungen.
+    </p>
+
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-white border-t border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 py-10 grid sm:grid-cols-3 gap-8 text-sm">
+
+    <div>
+      <div class="font-semibold mb-2">Kontakt</div>
+      <div>
+        WhatsApp:
+        <a class="link" href="https://wa.me/4917677992233" target="_blank">
+          0176 77 99 22 33
+        </a>
+      </div>
+      <div>
+        E-Mail:
+        <a class="link" href="mailto:Mays_r.s@yahoo.com">
+          Mays_r.s@yahoo.com
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="font-semibold mb-2">Adresse</div>
+      <a class="link" target="_blank"
+         href="https://www.google.com/maps/dir/?api=1&destination=Lagenbeckerstraße%20104%2C%2049477%20Ibbenbüren">
+        Lagenbeckerstraße 104, 49477 Ibbenbüren
+      </a>
+      <div class="mt-2 text-gray-600">
+        Sommer (Mo–So): 12–21 Uhr<br>
+        Winter (Mo–So): 12–20 Uhr
+      </div>
+    </div>
+
+    <div>
+      <div class="font-semibold mb-2">Infos</div>
+      <nav class="flex flex-wrap gap-3">
+        <a class="link" href="/ueber-uns.html">Über uns</a>
+        <a class="link" href="/faq.html">FAQ</a>
+        <a class="link" href="/versand.html">Versand & Rückgabe</a>
+        <a class="link" href="/datenschutz.html">Datenschutz</a>
+        <a class="link" href="/agb.html">AGB</a>
+      </nav>
+    </div>
+
+  </div>
+
+  <div class="text-center text-xs text-gray-500 py-6">
+    © 2025 Mays Restaurants & Süßspeisen
+  </div>
+</footer>
+
+<!-- Warenkorb-Badge aktualisieren -->
+<script>
+  const CART_KEY = "mays_cart";
+  const getCart = () => JSON.parse(localStorage.getItem(CART_KEY) || "[]");
+  const badge = document.getElementById("cartBadge");
+  if (badge) {
+    const n = getCart().reduce((s,i)=>s+(+i.qty||0),0);
+    badge.textContent = n;
+  }
+</script>
+
+</body>
+</html>
