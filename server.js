@@ -15,6 +15,10 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = Number(process.env.PORT) || 4242;
+app.get('/api/test', (_req, res) => {
+  res.json({ success: true, message: 'Backend funktioniert!' });
+});
+
 
 // ----------------------------------------------------------
 //  STRIPE WEBHOOK (MUSS VOR express.json KOMMEN)
