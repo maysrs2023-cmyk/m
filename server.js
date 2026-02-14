@@ -46,6 +46,20 @@ app.post('/webhook', express.raw({ type: 'application/json' }), (req, res) => {
   res.status(200).send('Webhook empfangen');
 });
 
+
+
+// ✅ API-Endpunkt zuerst definieren
+app.get('/api/test', (req, res) => {
+  res.json({ success: true, message: 'Backend funktioniert!' });
+});
+
+// Danach alles andere für das Frontend
+app.use(express.static('public'));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
 // ----------------------------------------------------------
 //  Middleware für normale API (nach webhook!)
 // ----------------------------------------------------------

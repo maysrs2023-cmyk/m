@@ -401,13 +401,22 @@ document.addEventListener("DOMContentLoaded", () => {
       qty: i.qty
     }));
 
-    const pickup = false; // später kannst du das auswählbar machen
+    const pickup = false;
 
-    const res = await fetch("/api/create-checkout-session", {
+    const API = "https://m-production-4413.up.railway.app";
+
+    const res = await fetch(`${API}/api/create-checkout-session`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items, pickup })
     });
+
+    if (!res.ok) {
+      const txt = await res.text();
+      console.log("Backend error:", txt);
+      alert("Backend error: " + txt);
+      return;
+    }
 
     const data = await res.json();
     if (data.url) {
