@@ -401,15 +401,13 @@ document.addEventListener("DOMContentLoaded", () => {
       qty: i.qty
     }));
 
-    const pickup = false;
+  const pickup = false;
 
-    const API = "https://m-production-4413.up.railway.app";
-
-    const res = await fetch(`${API}/api/create-checkout-session`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ items, pickup })
-    });
+const res = await fetch(`/api/create-checkout-session`, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ items, pickup })
+});
 
     if (!res.ok) {
       const txt = await res.text();
