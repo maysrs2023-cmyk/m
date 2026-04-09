@@ -113,6 +113,13 @@ app.listen(PORT)
 app.post('/api/create-checkout-session', async (req, res) => {
   try {
 const { items, pickup, country } = req.body;
+
+    console.log("DEBUG req.body:", req.body);
+    console.log("DEBUG country:", country);
+    console.log("DEBUG pickup:", pickup);
+    console.log("DEBUG items:", items);
+
+
     if (!Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ error: 'Keine Artikel im Warenkorb' });
     }
@@ -208,6 +215,12 @@ if (subtotal >= 6000) {
 } else {
   rateId = SHIPPING.EU[tier];
 }
+
+console.log("DEBUG subtotal:", subtotal);
+console.log("DEBUG tier:", tier);
+console.log("DEBUG chosen rateId:", rateId);
+console.log("DEBUG DE 2kg:", SHIPPING.DE["2kg"]);
+console.log("DEBUG EU 2kg:", SHIPPING.EU["2kg"]);
 
       baseSession.shipping_options = [{ shipping_rate: rateId }];
     } else {
