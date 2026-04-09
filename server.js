@@ -112,9 +112,7 @@ app.listen(PORT)
 // ----------------------------------------------------------
 app.post('/api/create-checkout-session', async (req, res) => {
   try {
-    const { items } = req.body;
-const pickup = true;
-
+const { items, pickup } = req.body;
     if (!Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ error: 'Keine Artikel im Warenkorb' });
     }
