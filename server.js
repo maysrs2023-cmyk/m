@@ -112,7 +112,7 @@ app.listen(PORT)
 // ----------------------------------------------------------
 app.post('/api/create-checkout-session', async (req, res) => {
   try {
-const { items, pickup } = req.body;
+const { items, pickup, country } = req.body;
     if (!Array.isArray(items) || items.length === 0) {
       return res.status(400).json({ error: 'Keine Artikel im Warenkorb' });
     }
@@ -199,9 +199,15 @@ const { items, pickup } = req.body;
       };
 
       // Versandrate wählen (du nutzt die SHR-IDs aus Stripe!)
-      const rateId = (subtotal >= 6000)
-        ? SHIPPING.FREE_AB60
-        : SHIPPING.EU[tier];
+let rateId;
+
+if (subtotal >= 6000) {
+  rateId = SHIPPING.FREE_AB60;
+} else if (country === 'DE') {
+  rateId = SHIPPING.DE[tier];
+} else {
+  rateId = SHIPPING.EU[tier];
+}
 
       baseSession.shipping_options = [{ shipping_rate: rateId }];
     } else {

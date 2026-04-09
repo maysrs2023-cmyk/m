@@ -401,12 +401,13 @@ document.addEventListener("DOMContentLoaded", () => {
       qty: i.qty
     }));
 
-  const pickup = false;
+const pickup = false;
+const country = "DE";
 
 const res = await fetch(`/api/create-checkout-session`, {
   method: "POST",
   headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ items, pickup })
+  body: JSON.stringify({ items, pickup, country })
 });
 
     if (!res.ok) {
